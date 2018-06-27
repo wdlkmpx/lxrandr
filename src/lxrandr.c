@@ -71,6 +71,7 @@ static GSList* monitors = NULL;
 static Monitor* LVDS = NULL;
 
 static GtkWidget* dlg = NULL;
+guint timer = 0; //it's set to 0 in cancel_confirmation() so that g_source_remove() doesn't fail..
 
 /* Disable, not used
 static void monitor_free( Monitor* m )
@@ -493,6 +494,7 @@ static gboolean cancel_confirmation(gpointer data)
 {
     if (!g_source_is_destroyed(g_main_current_source()))
         gtk_dialog_response(data, GTK_RESPONSE_CANCEL);
+    timer = 0;
     return FALSE;
 }
 
@@ -509,7 +511,6 @@ static void set_xrandr_info()
     {
         /* open a dialog box and wait 15 seconds */
         GtkWidget *confirmation;
-        guint timer;
         int responce;
 
         confirmation = gtk_message_dialog_new(GTK_WINDOW(dlg), GTK_DIALOG_MODAL,
@@ -522,9 +523,12 @@ static void set_xrandr_info()
                                _("_Abort"), GTK_RESPONSE_CANCEL,
                                NULL);
         gtk_dialog_set_default_response(GTK_DIALOG(confirmation), GTK_RESPONSE_CANCEL);
-        timer = gdk_threads_add_timeout(15000, cancel_confirmation, confirmation);
+        timer = g_timeout_add(15000, cancel_confirmation, confirmation);
         responce = gtk_dialog_run(GTK_DIALOG(confirmation));
-        g_source_remove(timer);
+        if (timer) {
+          g_source_remove(timer);
+          timer = 0;
+        }
         gtk_widget_destroy(confirmation);
         /* if not confirmed then set GUI to fallback values, reset xrandr,
            then restore all GUI again */
