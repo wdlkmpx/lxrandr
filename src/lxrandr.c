@@ -539,6 +539,12 @@ static void set_xrandr_info()
 
     if (g_spawn_command_line_sync( cmd->str, NULL, NULL, NULL, NULL ))
     {
+        // In some cases the confirmation dialog fails to show up
+        // therefore no action can be taken (confirm or cancel)
+        // and the resolution is automatically reverted
+        // However this is fixed by adding a 2-sec delay..
+        sleep(2);
+
         /* open a dialog box and wait 15 seconds */
         GtkWidget *confirmation;
         int responce;
