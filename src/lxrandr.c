@@ -164,8 +164,30 @@ static gboolean get_xrandr_info()
                 GPtrArray* strv;
                 if( ! str )
                     continue;
+
+                // add modes plus aspectratio
                 strv = g_ptr_array_sized_new(8);
-                g_ptr_array_add( strv, g_strdup(str) );
+                gchar* endptr;
+                gint64 width = g_ascii_strtoll( str, &endptr, 10 );
+                gint64 height = 1;
+                if (endptr != NULL)
+                {
+                    height = g_ascii_strtoll( endptr+1, &endptr, 10 );
+                }
+                // aspect-ratio via greatest common divisor
+                gint64 a = width;
+                gint64 b = height;
+                while (b != 0)
+                {
+                    gint64 tmp = a % b;
+                    a = b;
+                    b = tmp;
+                }
+                width = width / a;
+                height = height / a;
+                g_ptr_array_add( strv, g_strdup_printf("%s (%lld:%lld)", str, width, height) );
+
+                // add frequencies
                 while ((str = strtok( NULL, " ")))
                 {
                     if( *str )
@@ -375,8 +397,16 @@ static GString* get_command_xrandr_info()
                 gtk_tree_model_get_iter(model, &iter, path);
                 gtk_tree_model_get(model, &iter, text_column, &text, -1);
                 gtk_tree_path_free(path);
+
+                // mode is only until first space
+                gchar *first_space = g_strstr_len(text, strlen(text), " ");
+                if (first_space != NULL)
+                {
+                    *first_space = 0;
+                }
                 g_string_append(cmd, text);
                 g_free(text);
+
                 if( m->try_rate >= 1 ) // not auto refresh rate
                 {
                     g_string_append( cmd, " --rate " );
