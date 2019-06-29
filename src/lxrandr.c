@@ -733,6 +733,22 @@ static void on_response( GtkDialog* dialog, int response, gpointer user_data )
         gtk_dialog_run( GTK_DIALOG(msg) );
         gtk_widget_destroy( msg );
     }
+    else if (response == GTK_RESPONSE_REJECT)
+    {
+        char* file;
+        file = g_build_filename(  g_get_user_config_dir(), 
+                              "autostart", 
+                              "lxrandr-autostart.desktop", 
+                              NULL );
+        unlink(file);
+        GtkWidget* msg;
+        msg = gtk_message_dialog_new( GTK_WINDOW(dialog), 
+                                      0, GTK_MESSAGE_INFO, 
+                                      GTK_BUTTONS_OK, 
+                                      _("Configuration file deleted") );
+        gtk_dialog_run( GTK_DIALOG(msg) );
+        gtk_widget_destroy( msg );
+    }
 }
 
 int main(int argc, char** argv)
@@ -767,7 +783,9 @@ int main(int argc, char** argv)
                                        GTK_DIALOG_MODAL,
                                        GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
                                        GTK_STOCK_APPLY, GTK_RESPONSE_OK,
-                                       GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, NULL );
+                                       GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+                                       GTK_STOCK_CLEAR, GTK_RESPONSE_REJECT,
+                                       NULL );
     g_signal_connect( dlg, "response", G_CALLBACK(on_response), NULL );
     gtk_container_set_border_width( GTK_CONTAINER(dlg), 8 );
     gtk_dialog_set_alternative_button_order( GTK_DIALOG(dlg), GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1 );
