@@ -44,7 +44,7 @@ if test "x$enable_gtk3" = "xyes" ; then
   CFLAGS="$CFLAGS -DENABLE_GTK3"
   gtk_modules="gtk+-3.0 >= 3.0.0"
 else
-  gtk_modules="gtk+-2.0 >= 2.0.0"
+  gtk_modules="gtk+-2.0 >= 2.24.0"
 fi
 PKG_CHECK_MODULES(GTK, [$gtk_modules])
 AC_SUBST(GTK_CFLAGS)
