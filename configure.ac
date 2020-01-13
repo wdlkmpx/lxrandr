@@ -20,12 +20,6 @@ AM_PROG_CC_STDC
 AC_HEADER_STDC
 AM_PROG_CC_C_O
 
-AC_ARG_ENABLE(man,
-       [AS_HELP_STRING([--enable-man],[regenerate roff man pages from Docbook @<:@default=no@:>@])],
-       [enable_man="${enableval}"],
-       [enable_man=no]
-)
-
 AC_ARG_ENABLE(more_warnings,
        [AS_HELP_STRING([--enable-more-warnings],[Add more warnings @<:@default=no@:>@])],
        [enable_more_warnings="${enableval}"],
@@ -70,21 +64,6 @@ do
 done
 
 AM_GLIB_GNU_GETTEXT
-
-if test x"$enable_man" = x"yes"; then
-	AC_PATH_PROG([XSLTPROC], [xsltproc])
-	if test -z "$XSLTPROC"; then
-		enable_man=no
-	fi
-
-	dnl check for DocBook DTD and stylesheets in the local catalog.
-	JH_CHECK_XML_CATALOG([-//OASIS//DTD DocBook XML V4.1.2//EN],
-		[DocBook XML DTD V4.1.2], [], enable_man=no)
-	JH_CHECK_XML_CATALOG([http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl],
-		[DocBook XSL Stylesheets >= 1.70.1], [], enable_man=no)
-fi
-
-AM_CONDITIONAL(ENABLE_REGENERATE_MAN, test "x$enable_man" != "xno")
 
 AC_ARG_ENABLE(debug,
     [AC_HELP_STRING([--enable-debug],

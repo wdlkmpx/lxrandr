@@ -1,15 +1,5 @@
 
-if ENABLE_REGENERATE_MAN
-
-man_in_files = lxrandr.xml
-
-man_MANS = $(man_in_files:.xml=.1)
-
-.xml.1:
-	$(XSLTPROC) -o $@ -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl $<
-
-endif
-
+man_MANS = lxrandr.1
 desktop_in_files = lxrandr.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
