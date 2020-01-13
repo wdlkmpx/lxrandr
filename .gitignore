@@ -37,7 +37,6 @@ config.log
 config.status
 config.sub
 libtool
-po/LINGUAS
 po/Makefile
 po/POTFILES
 po/*.gmo
