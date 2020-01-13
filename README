@@ -1,1 +1,12 @@
 Notes for compilation: it requires intltool and GTK+ to compile.
+
+To compile:
+- sh autogen.sh
+- ./configure --prefix=/usr
+- make && make install
+
+PO/: Update lxrandr.po / *.po / LINGUAS
+- cd po
+- sh zupdatepo.sh
+- cd ..
+
