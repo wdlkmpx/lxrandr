@@ -923,7 +923,7 @@ int main(int argc, char** argv)
                 gtk_widget_set_sensitive(GTK_WIDGET(m->pos_combo), FALSE);
             gtk_box_pack_start(GTK_BOX(hbox), GTK_WIDGET(m->pos_combo), FALSE, TRUE, 2);
 
-            check = gtk_check_button_new_with_label("Primary");
+            check = gtk_check_button_new_with_label( _("Primary") );
             m->btPrimary = GTK_CHECK_BUTTON(check);
             gtk_box_pack_start( GTK_BOX(hbox), GTK_WIDGET(check), FALSE, TRUE, 2 );
 
