@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxrandr 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-26 01:07+0300\n"
+"POT-Creation-Date: 2020-01-14 07:56+0800\n"
 "PO-Revision-Date: 2014-10-30 14:28+0000\n"
 "Last-Translator: rago1975 <take1975@kumamoto.email.ne.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -20,188 +20,186 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1410630615.000000\n"
 
-#: ../src/lxrandr.c:87
+#: ../src/lxrandr.c:86
 msgid "Laptop LCD Monitor"
 msgstr "ラップトップ LCD モニタ"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:88
 msgid "External VGA Monitor"
 msgstr "外部 VGA モニタ"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:88
 msgid "VGA Monitor"
 msgstr "VGAモニタ"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:90
 msgid "External DVI Monitor"
 msgstr "外部 DVI モニタ"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:90
 msgid "DVI Monitor"
 msgstr "DVIモニタ"
 
-#: ../src/lxrandr.c:93
+#: ../src/lxrandr.c:92
 msgid "TV"
 msgstr "TV"
 
-#: ../src/lxrandr.c:95
+#: ../src/lxrandr.c:94
 msgid "Default Monitor"
 msgstr "デフォルトモニタ"
 
-#: ../src/lxrandr.c:247 ../src/lxrandr.c:258 ../src/lxrandr.c:883
-#: ../src/lxrandr.c:885
+#: ../src/lxrandr.c:311 ../src/lxrandr.c:946
 msgid "Auto"
 msgstr "自動"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxrandr.c:286
+#: ../src/lxrandr.c:338
 msgid "translator-credits"
 msgstr ""
 "Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "IWAI, Masaharu <iwai@alib.jp>"
 
-#: ../src/lxrandr.c:294
-msgid "LXRandR"
-msgstr "LXRandR"
-
-#. gtk_about_dialog_set_logo( (GtkAboutDialog*)about_dlg, gdk_pixbuf_new_from_file(  PACKAGE_DATA_DIR"/pixmaps/lxrandr.png", NULL ) );
-#: ../src/lxrandr.c:296
-msgid "Copyright (C) 2008-2014"
-msgstr "Copyright (C) 2008-2014"
-
-#: ../src/lxrandr.c:297
+#: ../src/lxrandr.c:349
 msgid "Monitor configuration tool for LXDE"
 msgstr "LXDE のためのモニタ設定ツール"
 
-#: ../src/lxrandr.c:466
+#: ../src/lxrandr.c:528
 msgid "LXRandR autostart"
 msgstr "LXRandR 自動スタート"
 
-#: ../src/lxrandr.c:467
+#: ../src/lxrandr.c:529
 msgid "Start xrandr with settings done in LXRandR"
 msgstr "LXRandR での設定が終わったとき xrandr を起動する"
 
-#: ../src/lxrandr.c:511
+#: ../src/lxrandr.c:579
 msgid ""
 "Is everything OK? Confirm within 15 seconds, otherwise previous state will "
 "be restored."
-msgstr "すべてOKですか? 15秒以内に確認してください。そうしないと前の状態に復帰します。"
+msgstr ""
+"すべてOKですか? 15秒以内に確認してください。そうしないと前の状態に復帰しま"
+"す。"
 
-#: ../src/lxrandr.c:514
+#: ../src/lxrandr.c:582
 msgid "_OK"
 msgstr "OK(_O)"
 
-#: ../src/lxrandr.c:515
+#: ../src/lxrandr.c:583
 msgid "_Abort"
 msgstr "中止(_A)"
 
-#: ../src/lxrandr.c:644
+#: ../src/lxrandr.c:710
 msgid ""
 "You cannot turn off all monitors. Otherwise, you will not be able to turn "
 "them on again since this tool is not accessible without monitor."
-msgstr "モニタの電源を落とすことはできません。モニタ無しでこのツールのアクセスすることはできないので、再び電源を入れることができなくなります。"
+msgstr ""
+"モニタの電源を落とすことはできません。モニタ無しでこのツールのアクセスするこ"
+"とはできないので、再び電源を入れることができなくなります。"
 
-#: ../src/lxrandr.c:665
+#: ../src/lxrandr.c:731
 msgid "Configuration Saved"
 msgstr "設定は保存されました"
 
-#: ../src/lxrandr.c:693
+#: ../src/lxrandr.c:747
+msgid "Configuration file deleted"
+msgstr ""
+
+#: ../src/lxrandr.c:775
 msgid "Unable to get monitor information!"
 msgstr "モニタの情報が得られません!"
 
-#: ../src/lxrandr.c:699
+#: ../src/lxrandr.c:781
 msgid "Display Settings"
 msgstr "ディスプレイの設定"
 
-#: ../src/lxrandr.c:734
+#: ../src/lxrandr.c:809
 msgid "Show the same screen on both laptop LCD and external monitor"
 msgstr "ラップトップの LCD と外部モニタに同じスクリーンを表示する"
 
-#: ../src/lxrandr.c:739
+#: ../src/lxrandr.c:814
 msgid "Turn off laptop LCD and use external monitor only"
 msgstr "ラップトップの LCD をオフにして外部モニタのみを使う"
 
-#: ../src/lxrandr.c:744
+#: ../src/lxrandr.c:819
 msgid "Turn off external monitor and use laptop LCD only"
 msgstr "外部モニタをオフにしてラップトップの LCD のみを使う"
 
-#: ../src/lxrandr.c:749
+#: ../src/lxrandr.c:824
 msgid "Place external monitor to the right of laptop LCD"
 msgstr "ラップトップLCDの右側に外部モニタを配置"
 
-#: ../src/lxrandr.c:754
+#: ../src/lxrandr.c:829
 msgid "Place external monitor above of laptop LCD"
 msgstr "ラップトップLCD上に外部モニタを配置"
 
-#: ../src/lxrandr.c:758
+#: ../src/lxrandr.c:833
 msgid "Quick Options"
 msgstr "クイック設定"
 
-#: ../src/lxrandr.c:767
+#: ../src/lxrandr.c:842
 msgid "Advanced"
 msgstr "高度な設定"
 
-#: ../src/lxrandr.c:771
+#: ../src/lxrandr.c:846
 msgid "The following monitor is detected:"
 msgid_plural "The following monitors are detected:"
 msgstr[0] "以下のモニタが検出されました:"
 
-#: ../src/lxrandr.c:823
+#: ../src/lxrandr.c:898
 msgid "Turn On"
 msgstr "オンにする"
 
-#: ../src/lxrandr.c:837
+#: ../src/lxrandr.c:912
 msgid "Position:"
 msgstr "位置:"
 
-#: ../src/lxrandr.c:841 ../src/lxrandr.c:849
+#: ../src/lxrandr.c:915
 msgid "Default"
 msgstr "デフォルト"
 
-#: ../src/lxrandr.c:842 ../src/lxrandr.c:850
+#: ../src/lxrandr.c:916
 msgid "On right"
 msgstr "右"
 
-#: ../src/lxrandr.c:843 ../src/lxrandr.c:851
+#: ../src/lxrandr.c:917
 msgid "Above"
 msgstr "上"
 
-#: ../src/lxrandr.c:844 ../src/lxrandr.c:852
+#: ../src/lxrandr.c:918
 msgid "On left"
 msgstr "左"
 
-#: ../src/lxrandr.c:845 ../src/lxrandr.c:853
+#: ../src/lxrandr.c:919
 msgid "Below"
 msgstr "下"
 
-#: ../src/lxrandr.c:861
+#: ../src/lxrandr.c:925
+msgid "Primary"
+msgstr ""
+
+#: ../src/lxrandr.c:933
 msgid "Resolution:"
 msgstr "解像度:"
 
-#: ../src/lxrandr.c:872
+#: ../src/lxrandr.c:940
 msgid "Refresh Rate:"
 msgstr "リフレッシュレート:"
 
-#: ../data/lxrandr.desktop.in.h:1
-msgid "Change screen resolution and configure external monitors"
-msgstr "解像度の変更と外部モニタの設定を行います"
-
-#: ../data/lxrandr.desktop.in.h:2
+#: ../data/lxrandr.desktop.in:3
 msgid "Monitor Settings"
 msgstr "モニタの設定"
 
-#: ../data/lxrandr.desktop.in.h:3
+#: ../data/lxrandr.desktop.in:4
+msgid "Change screen resolution and configure external monitors"
+msgstr "解像度の変更と外部モニタの設定を行います"
+
+#: ../data/lxrandr.desktop.in:11
 msgid ""
 "screen;display;tv;extend;projector;xrandr;refresh rate;position;enable;"
 "disable;"
-msgstr "スクリーン;ディスプレイ;TV;拡張;プロジェクター;xrandr;更新速度;位置;可能;不可;"
+msgstr ""
+"スクリーン;ディスプレイ;TV;拡張;プロジェクター;xrandr;更新速度;位置;可能;不"
+"可;"
 
-#~ msgid "Copyright (C) 2008-2011"
-#~ msgstr "Copyright (C) 2008-2011"
 
-#~ msgid ""
-#~ "You cannot turn off all monitors. Otherwise, you will not be able to turn "
-#~ "them on again since this tool is not accessable without monitor."
-#~ msgstr ""
-#~ "すべてのモニタをオフには出来ません。このツールはモニタがないと利用できない"
-#~ "ので、再びオンにする手段がなくなるためです。"
+
+

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxrandr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-26 01:07+0300\n"
+"POT-Creation-Date: 2020-01-14 07:56+0800\n"
 "PO-Revision-Date: 2014-10-29 18:02+0000\n"
 "Last-Translator: H.Humpel <H.Humpel@gmx.de>\n"
 "Language-Team: German <LL@li.org>\n"
@@ -18,68 +18,58 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1410630615.000000\n"
 
-#: ../src/lxrandr.c:87
+#: ../src/lxrandr.c:86
 msgid "Laptop LCD Monitor"
 msgstr "Laptop-LCD-Monitor"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:88
 msgid "External VGA Monitor"
 msgstr "Externer VGA-Monitor"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:88
 msgid "VGA Monitor"
 msgstr "VGA Monitor"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:90
 msgid "External DVI Monitor"
 msgstr "Externer DVI-Monitor"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:90
 msgid "DVI Monitor"
 msgstr "DVI Monitor"
 
-#: ../src/lxrandr.c:93
+#: ../src/lxrandr.c:92
 msgid "TV"
 msgstr "TV"
 
-#: ../src/lxrandr.c:95
+#: ../src/lxrandr.c:94
 msgid "Default Monitor"
 msgstr "Standardmonitor"
 
-#: ../src/lxrandr.c:247 ../src/lxrandr.c:258 ../src/lxrandr.c:883
-#: ../src/lxrandr.c:885
+#: ../src/lxrandr.c:311 ../src/lxrandr.c:946
 msgid "Auto"
 msgstr "Automatisch"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxrandr.c:286
+#: ../src/lxrandr.c:338
 msgid "translator-credits"
 msgstr ""
 "Mario Blättermann <mario.blaettermann@t-online.de>\n"
 "Lutz Thuns <lthuns@opensuse.org>"
 
-#: ../src/lxrandr.c:294
-msgid "LXRandR"
-msgstr "LXRandR"
-
-#. gtk_about_dialog_set_logo( (GtkAboutDialog*)about_dlg, gdk_pixbuf_new_from_file(  PACKAGE_DATA_DIR"/pixmaps/lxrandr.png", NULL ) );
-#: ../src/lxrandr.c:296
-msgid "Copyright (C) 2008-2014"
-msgstr "Copyright (C) 2008-2014"
-
-#: ../src/lxrandr.c:297
+#: ../src/lxrandr.c:349
 msgid "Monitor configuration tool for LXDE"
 msgstr "Monitor-Einstellungswerkzeug für LXDE"
 
-#: ../src/lxrandr.c:466
+#: ../src/lxrandr.c:528
 msgid "LXRandR autostart"
 msgstr "LXRandR automatisch starten"
 
-#: ../src/lxrandr.c:467
+#: ../src/lxrandr.c:529
 msgid "Start xrandr with settings done in LXRandR"
 msgstr "Xrandr mit den Einstellungen aus LXRandR starten"
 
-#: ../src/lxrandr.c:511
+#: ../src/lxrandr.c:579
 msgid ""
 "Is everything OK? Confirm within 15 seconds, otherwise previous state will "
 "be restored."
@@ -87,15 +77,15 @@ msgstr ""
 "Ist alles in Ordnung? Bestätige innerhalb von 15 Sekunden, sonst werden die "
 "vorherigen Einstellungen wieder übernommen."
 
-#: ../src/lxrandr.c:514
+#: ../src/lxrandr.c:582
 msgid "_OK"
 msgstr "_OK"
 
-#: ../src/lxrandr.c:515
+#: ../src/lxrandr.c:583
 msgid "_Abort"
 msgstr "_Abbruch"
 
-#: ../src/lxrandr.c:644
+#: ../src/lxrandr.c:710
 msgid ""
 "You cannot turn off all monitors. Otherwise, you will not be able to turn "
 "them on again since this tool is not accessible without monitor."
@@ -104,111 +94,112 @@ msgstr ""
 "möglich diese wieder einzuschalten, weil dieses Programm ohne Monitor nicht "
 "wieder angezeigt werden kann."
 
-#: ../src/lxrandr.c:665
+#: ../src/lxrandr.c:731
 msgid "Configuration Saved"
 msgstr "Einstellungen gespeichert"
 
-#: ../src/lxrandr.c:693
+#: ../src/lxrandr.c:747
+msgid "Configuration file deleted"
+msgstr ""
+
+#: ../src/lxrandr.c:775
 msgid "Unable to get monitor information!"
 msgstr "Keine Informationen über den Monitor verfügbar!"
 
-#: ../src/lxrandr.c:699
+#: ../src/lxrandr.c:781
 msgid "Display Settings"
 msgstr "Anzeigeeinstellungen"
 
-#: ../src/lxrandr.c:734
+#: ../src/lxrandr.c:809
 msgid "Show the same screen on both laptop LCD and external monitor"
 msgstr "Gleiches Bild auf Laptop und externem Monitor zeigen"
 
-#: ../src/lxrandr.c:739
+#: ../src/lxrandr.c:814
 msgid "Turn off laptop LCD and use external monitor only"
 msgstr "Nur externen Monitor verwenden"
 
-#: ../src/lxrandr.c:744
+#: ../src/lxrandr.c:819
 msgid "Turn off external monitor and use laptop LCD only"
 msgstr "Nur Laptop-Monitor verwenden"
 
-#: ../src/lxrandr.c:749
+#: ../src/lxrandr.c:824
 msgid "Place external monitor to the right of laptop LCD"
 msgstr "Platziere den externen Monitor rechts neben dem LCD des Laptops."
 
-#: ../src/lxrandr.c:754
+#: ../src/lxrandr.c:829
 msgid "Place external monitor above of laptop LCD"
 msgstr "Platziere den externen Monitor über dem LCD des Laptops."
 
-#: ../src/lxrandr.c:758
+#: ../src/lxrandr.c:833
 msgid "Quick Options"
 msgstr "Einfach"
 
-#: ../src/lxrandr.c:767
+#: ../src/lxrandr.c:842
 msgid "Advanced"
 msgstr "Erweitert"
 
-#: ../src/lxrandr.c:771
+#: ../src/lxrandr.c:846
 msgid "The following monitor is detected:"
 msgid_plural "The following monitors are detected:"
 msgstr[0] "Der folgende Monitor wurde erkannt:"
 msgstr[1] "Die folgenden Monitore wurden erkannt:"
 
-#: ../src/lxrandr.c:823
+#: ../src/lxrandr.c:898
 msgid "Turn On"
 msgstr "Einschalten"
 
-#: ../src/lxrandr.c:837
+#: ../src/lxrandr.c:912
 msgid "Position:"
 msgstr "Position:"
 
-#: ../src/lxrandr.c:841 ../src/lxrandr.c:849
+#: ../src/lxrandr.c:915
 msgid "Default"
 msgstr "Vorgabe"
 
-#: ../src/lxrandr.c:842 ../src/lxrandr.c:850
+#: ../src/lxrandr.c:916
 msgid "On right"
 msgstr "Rechts von"
 
-#: ../src/lxrandr.c:843 ../src/lxrandr.c:851
+#: ../src/lxrandr.c:917
 msgid "Above"
 msgstr "Oberhalb"
 
-#: ../src/lxrandr.c:844 ../src/lxrandr.c:852
+#: ../src/lxrandr.c:918
 msgid "On left"
 msgstr "Links von"
 
-#: ../src/lxrandr.c:845 ../src/lxrandr.c:853
+#: ../src/lxrandr.c:919
 msgid "Below"
 msgstr "Unterhalb"
 
-#: ../src/lxrandr.c:861
+#: ../src/lxrandr.c:925
+msgid "Primary"
+msgstr ""
+
+#: ../src/lxrandr.c:933
 msgid "Resolution:"
 msgstr "Auflösung:"
 
-#: ../src/lxrandr.c:872
+#: ../src/lxrandr.c:940
 msgid "Refresh Rate:"
 msgstr "Bildwiederholfrequenz:"
 
-#: ../data/lxrandr.desktop.in.h:1
-msgid "Change screen resolution and configure external monitors"
-msgstr "Die Bildschirmauflösung und externe Monitore konfigurieren"
-
-#: ../data/lxrandr.desktop.in.h:2
+#: ../data/lxrandr.desktop.in:3
 msgid "Monitor Settings"
 msgstr "Bildschirmeinstellungen"
 
-#: ../data/lxrandr.desktop.in.h:3
+#: ../data/lxrandr.desktop.in:4
+msgid "Change screen resolution and configure external monitors"
+msgstr "Die Bildschirmauflösung und externe Monitore konfigurieren"
+
+#: ../data/lxrandr.desktop.in:11
 msgid ""
 "screen;display;tv;extend;projector;xrandr;refresh rate;position;enable;"
 "disable;"
 msgstr ""
-"Bildschirm;Anzeige;TV;erweitern;Projektor;xrandr;Bildwiederholrate;Position;e"
-"inschalten;ausschalten;"
+"Bildschirm;Anzeige;TV;erweitern;Projektor;xrandr;Bildwiederholrate;Position;"
+"einschalten;ausschalten;"
 
-#~ msgid "Copyright (C) 2008-2011"
-#~ msgstr "Copyright (C) 2008-2011"
 
-#~ msgid ""
-#~ "You cannot turn off all monitors. Otherwise, you will not be able to turn "
-#~ "them on again since this tool is not accessable without monitor."
-#~ msgstr ""
-#~ "Sie können nicht sämtliche Monitore abschalten. Anderenfalls werden Sie "
-#~ "nicht in der Lage sein, sie wieder einzuschalten, weil auf dieses "
-#~ "Programm ohne Monitor nicht zugegriffen werden kann."
+
+
