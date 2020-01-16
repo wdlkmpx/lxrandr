@@ -803,7 +803,11 @@ int main(int argc, char** argv)
     // If this is a laptop and there is an external monitor, offer quick options
     if( LVDS && g_slist_length( monitors ) == 2 )
     {
+#if GTK_CHECK_VERSION(3, 2, 0)
+        vbox = gtk_box_new( GTK_ORIENTATION_VERTICAL, 4 );
+#else //gtk2
         vbox = gtk_vbox_new( FALSE, 4 );
+#endif
         gtk_container_set_border_width( GTK_CONTAINER(vbox), 8 );
 
         btn = gtk_radio_button_new_with_label(NULL, _("Show the same screen on both laptop LCD and external monitor"));
@@ -837,7 +841,12 @@ int main(int argc, char** argv)
         gtk_notebook_set_show_tabs( GTK_NOTEBOOK(notebook), FALSE );
     }
 
+#if GTK_CHECK_VERSION(3, 2, 0)
+    vbox = gtk_box_new( GTK_ORIENTATION_VERTICAL, 4 );
+#else //gtk2
     vbox = gtk_vbox_new( FALSE, 4 );
+#endif
+
     gtk_container_set_border_width( GTK_CONTAINER(vbox), 8 );
     gtk_notebook_append_page( GTK_NOTEBOOK(notebook), vbox, gtk_label_new(_("Advanced")) );
 
@@ -891,7 +900,12 @@ int main(int argc, char** argv)
         frame = gtk_frame_new( get_human_readable_name(m) );
         gtk_box_pack_start( GTK_BOX(vbox), frame, FALSE, TRUE, 2 );
 
+#if GTK_CHECK_VERSION(3, 2, 0)
+        hbox = gtk_box_new( GTK_ORIENTATION_HORIZONTAL, 4 );
+#else //gtk2
         hbox = gtk_hbox_new( FALSE, 4 );
+#endif
+
         gtk_container_set_border_width( GTK_CONTAINER(hbox), 4 );
         gtk_container_add( GTK_CONTAINER(frame), hbox );
 
