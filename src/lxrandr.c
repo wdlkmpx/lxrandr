@@ -851,7 +851,12 @@ int main(int argc, char** argv)
     gtk_notebook_append_page( GTK_NOTEBOOK(notebook), vbox, gtk_label_new(_("Advanced")) );
 
     label = gtk_label_new("");
+#if GTK_CHECK_VERSION(3, 14, 0)
+    gtk_widget_set_halign(label, GTK_ALIGN_START);
+    gtk_widget_set_valign(label, GTK_ALIGN_START);
+#else
     gtk_misc_set_alignment( GTK_MISC(label), 0.0, 0.5 );
+#endif
     gtk_label_set_markup( GTK_LABEL(label), ngettext( "The following monitor is detected:",
                                     "The following monitors are detected:",
                                     g_slist_length(monitors) ) );
