@@ -326,7 +326,7 @@ static void open_url( GtkDialog* dlg, const char* url, gpointer data )
 }
 */
 
-static void on_about( GtkButton* btn, gpointer parent )
+static void show_about_dlg( gpointer parent )
 {
     GtkWidget * about_dlg;
     const gchar *authors[] =
@@ -748,6 +748,12 @@ static void on_response( GtkDialog* dialog, int response, gpointer user_data )
         gtk_dialog_run( GTK_DIALOG(msg) );
         gtk_widget_destroy( msg );
     }
+    else if (response == GTK_RESPONSE_HELP)
+    {
+        show_about_dlg(dialog);
+        // block the response
+        g_signal_stop_emission_by_name( dialog, "response" );
+    }
 }
 
 int main(int argc, char** argv)
@@ -782,22 +788,38 @@ int main(int argc, char** argv)
     dlg = gtk_dialog_new_with_buttons( _("Display Settings"),
                                        GTK_WINDOW(window),
                                        GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-                                       GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
-                                       GTK_STOCK_APPLY, GTK_RESPONSE_OK,
-                                       GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                                       GTK_STOCK_CLEAR, GTK_RESPONSE_REJECT,
                                        NULL );
     g_signal_connect( dlg, "response", G_CALLBACK(on_response), NULL );
     gtk_container_set_border_width( GTK_CONTAINER(dlg), 8 );
-    gtk_dialog_set_alternative_button_order( GTK_DIALOG(dlg), GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1 );
 
     /* Set icon name for main (dlg) window so it displays in the panel. */
     gtk_window_set_icon_name(GTK_WINDOW(dlg), "video-display");
 
-    btn = gtk_button_new_from_stock( GTK_STOCK_ABOUT );
-    gtk_box_pack_start(GTK_BOX(gtk_dialog_get_action_area( GTK_DIALOG(dlg))), btn, FALSE, TRUE, 0 );
-    gtk_button_box_set_child_secondary( GTK_BUTTON_BOX(gtk_dialog_get_action_area( GTK_DIALOG(dlg))), btn, TRUE );
-    g_signal_connect( btn, "clicked", G_CALLBACK(on_about), dlg );
+#if GTK_CHECK_VERSION(3, 10, 0)
+    GtkWidget* button_save   = gtk_dialog_add_button(GTK_DIALOG(dlg), _("_Save"),   GTK_RESPONSE_ACCEPT);
+    GtkWidget* button_apply  = gtk_dialog_add_button(GTK_DIALOG(dlg), _("_Apply"),  GTK_RESPONSE_OK);
+    GtkWidget* button_cancel = gtk_dialog_add_button(GTK_DIALOG(dlg), _("_Cancel"), GTK_RESPONSE_CANCEL);
+    GtkWidget* button_clear  = gtk_dialog_add_button(GTK_DIALOG(dlg), _("C_lear"),  GTK_RESPONSE_REJECT);
+    GtkWidget* button_about  = gtk_dialog_add_button(GTK_DIALOG(dlg), _("A_bout"),  GTK_RESPONSE_HELP);
+    //--
+    GtkWidget *image;
+    image = gtk_image_new_from_icon_name("document-save-as", GTK_ICON_SIZE_BUTTON);
+    gtk_button_set_image(GTK_BUTTON(button_save), image);
+    image = gtk_image_new_from_icon_name("dialog-apply", GTK_ICON_SIZE_BUTTON);
+    gtk_button_set_image(GTK_BUTTON(button_apply), image);
+    image = gtk_image_new_from_icon_name("dialog-cancel", GTK_ICON_SIZE_BUTTON);
+    gtk_button_set_image(GTK_BUTTON(button_cancel), image);
+    image = gtk_image_new_from_icon_name("edit-clear",  GTK_ICON_SIZE_BUTTON);
+    gtk_button_set_image(GTK_BUTTON(button_clear), image);
+    image = gtk_image_new_from_icon_name("help-about", GTK_ICON_SIZE_BUTTON);
+    gtk_button_set_image(GTK_BUTTON(button_about), image);
+#else
+    GtkWidget* button_save   = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_SAVE,   GTK_RESPONSE_ACCEPT);
+    GtkWidget* button_apply  = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_APPLY,  GTK_RESPONSE_OK);
+    GtkWidget* button_cancel = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
+    GtkWidget* button_clear  = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_CLEAR,  GTK_RESPONSE_REJECT);
+    GtkWidget* button_about  = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_ABOUT,  GTK_RESPONSE_HELP);
+#endif
 
     notebook = gtk_notebook_new();
     gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(dlg))), notebook, TRUE, TRUE, 2 );
