@@ -778,8 +778,10 @@ int main(int argc, char** argv)
         return 1;
     }
 
-    dlg = gtk_dialog_new_with_buttons( _("Display Settings"), NULL,
-                                       GTK_DIALOG_MODAL,
+    GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    dlg = gtk_dialog_new_with_buttons( _("Display Settings"),
+                                       GTK_WINDOW(window),
+                                       GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
                                        GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
                                        GTK_STOCK_APPLY, GTK_RESPONSE_OK,
                                        GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
