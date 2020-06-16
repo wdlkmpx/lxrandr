@@ -802,17 +802,47 @@ int main(int argc, char** argv)
     GtkWidget* button_cancel = gtk_dialog_add_button(GTK_DIALOG(dlg), _("_Cancel"), GTK_RESPONSE_CANCEL);
     GtkWidget* button_clear  = gtk_dialog_add_button(GTK_DIALOG(dlg), _("C_lear"),  GTK_RESPONSE_REJECT);
     GtkWidget* button_about  = gtk_dialog_add_button(GTK_DIALOG(dlg), _("A_bout"),  GTK_RESPONSE_HELP);
+    gtk_button_set_always_show_image (GTK_BUTTON(button_save),   TRUE);
+    gtk_button_set_always_show_image (GTK_BUTTON(button_apply),  TRUE);
+    gtk_button_set_always_show_image (GTK_BUTTON(button_cancel), TRUE);
+    gtk_button_set_always_show_image (GTK_BUTTON(button_clear),  TRUE);
+    gtk_button_set_always_show_image (GTK_BUTTON(button_about),  TRUE);
     //--
+    GtkIconTheme *icon_theme = gtk_icon_theme_get_default();
     GtkWidget *image;
-    image = gtk_image_new_from_icon_name("document-save-as", GTK_ICON_SIZE_BUTTON);
+    if (gtk_icon_theme_has_icon(icon_theme, "gtk-save-as")) {
+        image = gtk_image_new_from_icon_name ("gtk-save-as", GTK_ICON_SIZE_BUTTON);
+    } else {
+        image = gtk_image_new_from_icon_name ("document-save-as", GTK_ICON_SIZE_BUTTON);
+    }
     gtk_button_set_image(GTK_BUTTON(button_save), image);
-    image = gtk_image_new_from_icon_name("dialog-apply", GTK_ICON_SIZE_BUTTON);
+
+    if (gtk_icon_theme_has_icon(icon_theme, "gtk-apply")) {
+        image = gtk_image_new_from_icon_name ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+    } else {
+        image = gtk_image_new_from_icon_name ("dialog-apply", GTK_ICON_SIZE_BUTTON);
+    }
     gtk_button_set_image(GTK_BUTTON(button_apply), image);
-    image = gtk_image_new_from_icon_name("dialog-cancel", GTK_ICON_SIZE_BUTTON);
+
+    if (gtk_icon_theme_has_icon(icon_theme, "gtk-cancel")) {
+        image = gtk_image_new_from_icon_name ("gtk-cancel", GTK_ICON_SIZE_BUTTON);
+    } else {
+        image = gtk_image_new_from_icon_name ("dialog-cancel", GTK_ICON_SIZE_BUTTON);
+    }
     gtk_button_set_image(GTK_BUTTON(button_cancel), image);
-    image = gtk_image_new_from_icon_name("edit-clear",  GTK_ICON_SIZE_BUTTON);
+
+    if (gtk_icon_theme_has_icon(icon_theme, "gtk-clear")) {
+        image = gtk_image_new_from_icon_name ("gtk-clear", GTK_ICON_SIZE_BUTTON);
+    } else {
+        image = gtk_image_new_from_icon_name ("edit-clear",  GTK_ICON_SIZE_BUTTON);
+    }
     gtk_button_set_image(GTK_BUTTON(button_clear), image);
-    image = gtk_image_new_from_icon_name("help-about", GTK_ICON_SIZE_BUTTON);
+
+    if (gtk_icon_theme_has_icon(icon_theme, "gtk-about")) {
+        image = gtk_image_new_from_icon_name ("gtk-about", GTK_ICON_SIZE_BUTTON);
+    } else {
+        image = gtk_image_new_from_icon_name ("help-about", GTK_ICON_SIZE_BUTTON);
+    }
     gtk_button_set_image(GTK_BUTTON(button_about), image);
 #else
     GtkWidget* button_save   = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_SAVE,   GTK_RESPONSE_ACCEPT);
