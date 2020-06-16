@@ -796,24 +796,25 @@ int main(int argc, char** argv)
     /* Set icon name for main (dlg) window so it displays in the panel. */
     gtk_window_set_icon_name(GTK_WINDOW(dlg), "video-display");
 
-#if GTK_CHECK_VERSION(3, 10, 0)
     GtkWidget* button_save   = gtk_dialog_add_button(GTK_DIALOG(dlg), _("_Save"),   GTK_RESPONSE_ACCEPT);
     GtkWidget* button_apply  = gtk_dialog_add_button(GTK_DIALOG(dlg), _("_Apply"),  GTK_RESPONSE_OK);
     GtkWidget* button_cancel = gtk_dialog_add_button(GTK_DIALOG(dlg), _("_Cancel"), GTK_RESPONSE_CANCEL);
     GtkWidget* button_clear  = gtk_dialog_add_button(GTK_DIALOG(dlg), _("C_lear"),  GTK_RESPONSE_REJECT);
     GtkWidget* button_about  = gtk_dialog_add_button(GTK_DIALOG(dlg), _("A_bout"),  GTK_RESPONSE_HELP);
+#if GTK_CHECK_VERSION (3, 6, 0)
     gtk_button_set_always_show_image (GTK_BUTTON(button_save),   TRUE);
     gtk_button_set_always_show_image (GTK_BUTTON(button_apply),  TRUE);
     gtk_button_set_always_show_image (GTK_BUTTON(button_cancel), TRUE);
     gtk_button_set_always_show_image (GTK_BUTTON(button_clear),  TRUE);
     gtk_button_set_always_show_image (GTK_BUTTON(button_about),  TRUE);
+#endif
     //--
     GtkIconTheme *icon_theme = gtk_icon_theme_get_default();
     GtkWidget *image;
-    if (gtk_icon_theme_has_icon(icon_theme, "gtk-save-as")) {
-        image = gtk_image_new_from_icon_name ("gtk-save-as", GTK_ICON_SIZE_BUTTON);
-    } else {
+    if (gtk_icon_theme_has_icon(icon_theme, "document-save-as")) {
         image = gtk_image_new_from_icon_name ("document-save-as", GTK_ICON_SIZE_BUTTON);
+    } else {
+        image = gtk_image_new_from_icon_name ("gtk-save-as", GTK_ICON_SIZE_BUTTON);
     }
     gtk_button_set_image(GTK_BUTTON(button_save), image);
 
@@ -831,10 +832,10 @@ int main(int argc, char** argv)
     }
     gtk_button_set_image(GTK_BUTTON(button_cancel), image);
 
-    if (gtk_icon_theme_has_icon(icon_theme, "gtk-clear")) {
-        image = gtk_image_new_from_icon_name ("gtk-clear", GTK_ICON_SIZE_BUTTON);
+    if (gtk_icon_theme_has_icon(icon_theme, "edit-clear")) {
+        image = gtk_image_new_from_icon_name ("edit-clear", GTK_ICON_SIZE_BUTTON);
     } else {
-        image = gtk_image_new_from_icon_name ("edit-clear",  GTK_ICON_SIZE_BUTTON);
+        image = gtk_image_new_from_icon_name ("gtk-clear",  GTK_ICON_SIZE_BUTTON);
     }
     gtk_button_set_image(GTK_BUTTON(button_clear), image);
 
@@ -844,13 +845,6 @@ int main(int argc, char** argv)
         image = gtk_image_new_from_icon_name ("help-about", GTK_ICON_SIZE_BUTTON);
     }
     gtk_button_set_image(GTK_BUTTON(button_about), image);
-#else
-    GtkWidget* button_save   = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_SAVE,   GTK_RESPONSE_ACCEPT);
-    GtkWidget* button_apply  = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_APPLY,  GTK_RESPONSE_OK);
-    GtkWidget* button_cancel = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
-    GtkWidget* button_clear  = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_CLEAR,  GTK_RESPONSE_REJECT);
-    GtkWidget* button_about  = gtk_dialog_add_button(GTK_DIALOG(dlg), GTK_STOCK_ABOUT,  GTK_RESPONSE_HELP);
-#endif
 
     notebook = gtk_notebook_new();
     gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(dlg))), notebook, TRUE, TRUE, 2 );
