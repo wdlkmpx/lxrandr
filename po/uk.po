@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxrandr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-14 07:56+0800\n"
+"POT-Creation-Date: 2020-06-16 20:51+0800\n"
 "PO-Revision-Date: 2014-10-26 18:23+0000\n"
 "Last-Translator: Andriy Grytsenko <andrej@rep.kiev.ua>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,58 +19,58 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1410630615.000000\n"
 
-#: ../src/lxrandr.c:86
+#: ../src/lxrandr.c:87
 msgid "Laptop LCD Monitor"
 msgstr "Монітор LCD нотбука"
 
-#: ../src/lxrandr.c:88
+#: ../src/lxrandr.c:89
 msgid "External VGA Monitor"
 msgstr "Зовнішній VGA монітор"
 
-#: ../src/lxrandr.c:88
+#: ../src/lxrandr.c:89
 msgid "VGA Monitor"
 msgstr "VGA монітор"
 
-#: ../src/lxrandr.c:90
+#: ../src/lxrandr.c:91
 msgid "External DVI Monitor"
 msgstr "Зовнішній DVI монітор"
 
-#: ../src/lxrandr.c:90
+#: ../src/lxrandr.c:91
 msgid "DVI Monitor"
 msgstr "DVI монітор"
 
-#: ../src/lxrandr.c:92
+#: ../src/lxrandr.c:93
 msgid "TV"
 msgstr "Телевізор"
 
-#: ../src/lxrandr.c:94
+#: ../src/lxrandr.c:95
 msgid "Default Monitor"
 msgstr "Стандартний монітор"
 
-#: ../src/lxrandr.c:311 ../src/lxrandr.c:946
+#: ../src/lxrandr.c:312 ../src/lxrandr.c:1002
 msgid "Auto"
 msgstr "Автоматично"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxrandr.c:338
+#: ../src/lxrandr.c:339
 msgid "translator-credits"
 msgstr ""
 "Yarema aka Knedlyk <yupadmin@gmail.com>\n"
 "Andriy Grytsenko <andrej@rep.kiev.ua>"
 
-#: ../src/lxrandr.c:349
+#: ../src/lxrandr.c:350
 msgid "Monitor configuration tool for LXDE"
 msgstr "Інструмент конфігурації монітора для LXDE"
 
-#: ../src/lxrandr.c:528
+#: ../src/lxrandr.c:529
 msgid "LXRandR autostart"
 msgstr "Автостарт LXRandR"
 
-#: ../src/lxrandr.c:529
+#: ../src/lxrandr.c:530
 msgid "Start xrandr with settings done in LXRandR"
 msgstr "Старт xrandr з налаштуваннями зробленими в LXRandR"
 
-#: ../src/lxrandr.c:579
+#: ../src/lxrandr.c:580
 msgid ""
 "Is everything OK? Confirm within 15 seconds, otherwise previous state will "
 "be restored."
@@ -78,15 +78,15 @@ msgstr ""
 "Все гаразд? Підтвердіть на протязі 15 секунд, інакше попередній стан буде "
 "повернено."
 
-#: ../src/lxrandr.c:582
+#: ../src/lxrandr.c:583
 msgid "_OK"
 msgstr "_Гаразд"
 
-#: ../src/lxrandr.c:583
+#: ../src/lxrandr.c:584
 msgid "_Abort"
 msgstr "_Відміна"
 
-#: ../src/lxrandr.c:710
+#: ../src/lxrandr.c:711
 msgid ""
 "You cannot turn off all monitors. Otherwise, you will not be able to turn "
 "them on again since this tool is not accessible without monitor."
@@ -94,94 +94,114 @@ msgstr ""
 "Ви не можете виключити всі монітори. В противному випадку Вам не вдасться "
 "включити їх знову, оскільки ця утиліта не працює без монітору."
 
-#: ../src/lxrandr.c:731
+#: ../src/lxrandr.c:732
 msgid "Configuration Saved"
 msgstr "Налаштування збережені"
 
-#: ../src/lxrandr.c:747
+#: ../src/lxrandr.c:748
 msgid "Configuration file deleted"
 msgstr ""
 
-#: ../src/lxrandr.c:775
+#: ../src/lxrandr.c:782
 msgid "Unable to get monitor information!"
 msgstr "Не можу отримати інформацію про монітор!"
 
-#: ../src/lxrandr.c:781
+#: ../src/lxrandr.c:789
 msgid "Display Settings"
 msgstr "Установки дисплею"
 
-#: ../src/lxrandr.c:809
+#: ../src/lxrandr.c:799
+msgid "_Save"
+msgstr ""
+
+#: ../src/lxrandr.c:800
+msgid "_Apply"
+msgstr ""
+
+#: ../src/lxrandr.c:801
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/lxrandr.c:802
+msgid "C_lear"
+msgstr ""
+
+#: ../src/lxrandr.c:803
+msgid "A_bout"
+msgstr ""
+
+#: ../src/lxrandr.c:858
 msgid "Show the same screen on both laptop LCD and external monitor"
 msgstr "Показати той самий екран на лаптопі і на зовнішньому моніторі"
 
-#: ../src/lxrandr.c:814
+#: ../src/lxrandr.c:863
 msgid "Turn off laptop LCD and use external monitor only"
 msgstr "Виключити LCD лаптопа і використовувати тільки зовнішній монітор"
 
-#: ../src/lxrandr.c:819
+#: ../src/lxrandr.c:868
 msgid "Turn off external monitor and use laptop LCD only"
 msgstr "Виключити зовнішній монітор і використовувати тільки LCD лаптопа"
 
-#: ../src/lxrandr.c:824
+#: ../src/lxrandr.c:873
 msgid "Place external monitor to the right of laptop LCD"
 msgstr "Розмістити зовнішній монітор праворуч від LCD лаптопа"
 
-#: ../src/lxrandr.c:829
+#: ../src/lxrandr.c:878
 msgid "Place external monitor above of laptop LCD"
 msgstr "Розмістити зовнішній монітор вище LCD лаптопа"
 
-#: ../src/lxrandr.c:833
+#: ../src/lxrandr.c:882
 msgid "Quick Options"
 msgstr "Швидкі опції"
 
-#: ../src/lxrandr.c:842
+#: ../src/lxrandr.c:892
 msgid "Advanced"
 msgstr "Додатково"
 
-#: ../src/lxrandr.c:846
+#: ../src/lxrandr.c:901
 msgid "The following monitor is detected:"
 msgid_plural "The following monitors are detected:"
 msgstr[0] "Виявлено такий монітор:"
 msgstr[1] "Виявлено такі монітори:"
 msgstr[2] "Виявлено такі монітори:"
 
-#: ../src/lxrandr.c:898
+#: ../src/lxrandr.c:954
 msgid "Turn On"
 msgstr "Включити"
 
-#: ../src/lxrandr.c:912
+#: ../src/lxrandr.c:968
 msgid "Position:"
 msgstr "Положення:"
 
-#: ../src/lxrandr.c:915
+#: ../src/lxrandr.c:971
 msgid "Default"
 msgstr "Основне"
 
-#: ../src/lxrandr.c:916
+#: ../src/lxrandr.c:972
 msgid "On right"
 msgstr "Праворуч"
 
-#: ../src/lxrandr.c:917
+#: ../src/lxrandr.c:973
 msgid "Above"
 msgstr "Вище"
 
-#: ../src/lxrandr.c:918
+#: ../src/lxrandr.c:974
 msgid "On left"
 msgstr "Ліворуч"
 
-#: ../src/lxrandr.c:919
+#: ../src/lxrandr.c:975
 msgid "Below"
 msgstr "Нижче"
 
-#: ../src/lxrandr.c:925
+#: ../src/lxrandr.c:981
 msgid "Primary"
 msgstr ""
 
-#: ../src/lxrandr.c:933
+#: ../src/lxrandr.c:989
 msgid "Resolution:"
 msgstr "Роздільна здатність:"
 
-#: ../src/lxrandr.c:940
+#: ../src/lxrandr.c:996
 msgid "Refresh Rate:"
 msgstr "Частота оновлення:"
 
@@ -200,5 +220,3 @@ msgid ""
 msgstr ""
 "екран;відображення;зображення;тв;проектор;xrandr;частота оновлення;"
 "розміщення;підключення;ввімкнути;вимкнути;"
-
-
