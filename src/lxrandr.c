@@ -412,7 +412,7 @@ static GString* get_command_xrandr_info()
 
                 g_string_append( cmd, " --mode " );
                 model = gtk_combo_box_get_model(GTK_COMBO_BOX(m->res_combo));
-                text_column = gtk_combo_box_get_entry_text_column(GTK_COMBO_BOX(m->res_combo));
+                text_column = 0;
                 path = gtk_tree_path_new_from_indices(m->try_mode, -1);
                 gtk_tree_model_get_iter(model, &iter, path);
                 gtk_tree_model_get(model, &iter, text_column, &text, -1);
@@ -431,7 +431,7 @@ static GString* get_command_xrandr_info()
                 {
                     g_string_append( cmd, " --rate " );
                     model = gtk_combo_box_get_model(GTK_COMBO_BOX(m->rate_combo));
-                    text_column = gtk_combo_box_get_entry_text_column(GTK_COMBO_BOX(m->rate_combo));
+                    text_column = 0;
                     path = gtk_tree_path_new_from_indices(m->try_rate, -1);
                     gtk_tree_model_get_iter(model, &iter, path);
                     gtk_tree_model_get(model, &iter, text_column, &text, -1);

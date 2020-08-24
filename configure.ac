@@ -1,15 +1,13 @@
 dnl Process this file with autoconf to produce a configure script.
 
 AC_INIT([lxrandr],[0.3.4w])
-AM_INIT_AUTOMAKE([1.11 -Wall -Werror foreign no-dist-gzip dist-xz])
+AM_INIT_AUTOMAKE([-Wall foreign])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([.])
+AM_GNU_GETTEXT([external])
 
-# Support silent build rules. Disable by either passing --disable-silent-rules
-# to configure or passing V=1 to make
-AM_SILENT_RULES([yes])
-
-AM_MAINTAINER_MODE([enable])
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+m4_ifdef([AM_MAINTAINER_MODE], [AM_MAINTAINER_MODE])
 
 # Init intltool
 IT_PROG_INTLTOOL
@@ -38,7 +36,7 @@ if test "x$enable_gtk3" = "xyes" ; then
   CFLAGS="$CFLAGS -DENABLE_GTK3"
   gtk_modules="gtk+-3.0 >= 3.0.0"
 else
-  gtk_modules="gtk+-2.0 >= 2.24.0"
+  gtk_modules="gtk+-2.0 >= 2.14.0"
 fi
 PKG_CHECK_MODULES(GTK, [$gtk_modules])
 AC_SUBST(GTK_CFLAGS)
