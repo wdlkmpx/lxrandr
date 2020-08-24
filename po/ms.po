@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 20:51+0800\n"
+"POT-Creation-Date: 2020-08-24 15:06+0800\n"
 "PO-Revision-Date: 2014-12-05 10:35+0000\n"
 "Last-Translator: system user <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,75 +18,75 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1410630615.000000\n"
 
-#: ../src/lxrandr.c:87
+#: ../src/lxrandr.c:88
 msgid "Laptop LCD Monitor"
 msgstr "Monitor LCD Komputer Riba"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:90
 msgid "External VGA Monitor"
 msgstr "Monitor Luaran VGA"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:90
 #, fuzzy
 msgid "VGA Monitor"
 msgstr "Monitor Luaran VGA"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:92
 msgid "External DVI Monitor"
 msgstr "Monitor Luaran DVI"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:92
 #, fuzzy
 msgid "DVI Monitor"
 msgstr "Monitor Luaran DVI"
 
-#: ../src/lxrandr.c:93
+#: ../src/lxrandr.c:94
 msgid "TV"
 msgstr "TV"
 
-#: ../src/lxrandr.c:95
+#: ../src/lxrandr.c:96
 msgid "Default Monitor"
 msgstr "Monitor Default"
 
-#: ../src/lxrandr.c:312 ../src/lxrandr.c:1002
+#: ../src/lxrandr.c:313 ../src/lxrandr.c:999
 msgid "Auto"
 msgstr "Auto"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxrandr.c:339
+#: ../src/lxrandr.c:340
 msgid "translator-credits"
 msgstr ""
 "罗森柄 Payne Samad Loh <sploh77@yahoo.com>\n"
 "Phyz <phyz2010@gmail.com>\n"
 "Umarzuki Bin Mochlis Moktar <umarzuki@gmail.com>"
 
-#: ../src/lxrandr.c:350
+#: ../src/lxrandr.c:351
 msgid "Monitor configuration tool for LXDE"
 msgstr "Peranti konfigurasi monitor untuk LXDE"
 
-#: ../src/lxrandr.c:529
+#: ../src/lxrandr.c:530
 msgid "LXRandR autostart"
 msgstr ""
 
-#: ../src/lxrandr.c:530
+#: ../src/lxrandr.c:531
 msgid "Start xrandr with settings done in LXRandR"
 msgstr ""
 
-#: ../src/lxrandr.c:580
+#: ../src/lxrandr.c:581
 msgid ""
 "Is everything OK? Confirm within 15 seconds, otherwise previous state will "
 "be restored."
 msgstr ""
 
-#: ../src/lxrandr.c:583
+#: ../src/lxrandr.c:584
 msgid "_OK"
 msgstr ""
 
-#: ../src/lxrandr.c:584
+#: ../src/lxrandr.c:585
 msgid "_Abort"
 msgstr ""
 
-#: ../src/lxrandr.c:711
+#: ../src/lxrandr.c:712
 #, fuzzy
 msgid ""
 "You cannot turn off all monitors. Otherwise, you will not be able to turn "
@@ -95,132 +95,132 @@ msgstr ""
 "Anda tidak boleh menutup semua monitor. Sebaliknya, anda tidak akan boleh "
 "membuka ia semula sejak peranti ini tidak boleh diakseskan tanpa monitor."
 
-#: ../src/lxrandr.c:732
+#: ../src/lxrandr.c:733
 msgid "Configuration Saved"
 msgstr ""
 
-#: ../src/lxrandr.c:748
+#: ../src/lxrandr.c:749
 msgid "Configuration file deleted"
 msgstr ""
 
-#: ../src/lxrandr.c:782
+#: ../src/lxrandr.c:783
 msgid "Unable to get monitor information!"
 msgstr "Tidak boleh mendapatkan informasi monitor!"
 
-#: ../src/lxrandr.c:789
+#: ../src/lxrandr.c:792
 msgid "Display Settings"
 msgstr "Ciri-Ciri Paparan"
 
-#: ../src/lxrandr.c:799
+#: ../src/lxrandr.c:801
 msgid "_Save"
 msgstr ""
 
-#: ../src/lxrandr.c:800
+#: ../src/lxrandr.c:802
 msgid "_Apply"
 msgstr ""
 
-#: ../src/lxrandr.c:801
+#: ../src/lxrandr.c:803
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/lxrandr.c:802
+#: ../src/lxrandr.c:804
 msgid "C_lear"
 msgstr ""
 
-#: ../src/lxrandr.c:803
+#: ../src/lxrandr.c:805
 msgid "A_bout"
 msgstr ""
 
-#: ../src/lxrandr.c:858
+#: ../src/lxrandr.c:860
 msgid "Show the same screen on both laptop LCD and external monitor"
 msgstr ""
 "Tunjukkan skrin yang sama pada kedua-dua komputer riba dan monitor luaran"
 
-#: ../src/lxrandr.c:863
+#: ../src/lxrandr.c:865
 msgid "Turn off laptop LCD and use external monitor only"
 msgstr "Tutupkan LCD komppter riba dan gunakan monitor luaran sahaja"
 
-#: ../src/lxrandr.c:868
+#: ../src/lxrandr.c:870
 msgid "Turn off external monitor and use laptop LCD only"
 msgstr "Tutupkan monitor luaran dan gunakan LCD komputer riba sahaja"
 
-#: ../src/lxrandr.c:873
+#: ../src/lxrandr.c:875
 #, fuzzy
 msgid "Place external monitor to the right of laptop LCD"
 msgstr "Tutupkan monitor luaran dan gunakan LCD komputer riba sahaja"
 
-#: ../src/lxrandr.c:878
+#: ../src/lxrandr.c:880
 #, fuzzy
 msgid "Place external monitor above of laptop LCD"
 msgstr "Tutupkan monitor luaran dan gunakan LCD komputer riba sahaja"
 
-#: ../src/lxrandr.c:882
+#: ../src/lxrandr.c:884
 msgid "Quick Options"
 msgstr "Opsyen-Opsyen Cepat"
 
-#: ../src/lxrandr.c:892
+#: ../src/lxrandr.c:894
 msgid "Advanced"
 msgstr "Majuan"
 
-#: ../src/lxrandr.c:901
+#: ../src/lxrandr.c:898
 msgid "The following monitor is detected:"
 msgid_plural "The following monitors are detected:"
 msgstr[0] "Monitor berikut telah dikesan"
 
-#: ../src/lxrandr.c:954
+#: ../src/lxrandr.c:951
 msgid "Turn On"
 msgstr "Bukakan"
 
-#: ../src/lxrandr.c:968
+#: ../src/lxrandr.c:965
 #, fuzzy
 msgid "Position:"
 msgstr "Resolusi"
 
-#: ../src/lxrandr.c:971
+#: ../src/lxrandr.c:968
 #, fuzzy
 msgid "Default"
 msgstr "Monitor Default"
 
-#: ../src/lxrandr.c:972
+#: ../src/lxrandr.c:969
 msgid "On right"
 msgstr ""
 
-#: ../src/lxrandr.c:973
+#: ../src/lxrandr.c:970
 msgid "Above"
 msgstr ""
 
-#: ../src/lxrandr.c:974
+#: ../src/lxrandr.c:971
 msgid "On left"
 msgstr ""
 
-#: ../src/lxrandr.c:975
+#: ../src/lxrandr.c:972
 msgid "Below"
 msgstr ""
 
-#: ../src/lxrandr.c:981
+#: ../src/lxrandr.c:978
 msgid "Primary"
 msgstr ""
 
-#: ../src/lxrandr.c:989
+#: ../src/lxrandr.c:986
 msgid "Resolution:"
 msgstr "Resolusi"
 
-#: ../src/lxrandr.c:996
+#: ../src/lxrandr.c:993
 msgid "Refresh Rate:"
 msgstr "Kadar Menyegarkan:"
 
-#: ../data/lxrandr.desktop.in:3
+#: ../data/lxrandr.desktop.in.h:1
 #, fuzzy
 msgid "Monitor Settings"
 msgstr "Ciri-Ciri Paparan"
 
-#: ../data/lxrandr.desktop.in:4
+#: ../data/lxrandr.desktop.in.h:2
 #, fuzzy
 msgid "Change screen resolution and configure external monitors"
 msgstr ""
 "Tunjukkan skrin yang sama pada kedua-dua komputer riba dan monitor luaran"
 
-#: ../data/lxrandr.desktop.in:11
+#: ../data/lxrandr.desktop.in.h:3
 msgid ""
 "screen;display;tv;extend;projector;xrandr;refresh rate;position;enable;"
 "disable;"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxrandr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 20:51+0800\n"
+"POT-Creation-Date: 2020-08-24 15:06+0800\n"
 "PO-Revision-Date: 2015-05-04 17:04+0000\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian\n"
@@ -19,58 +19,58 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1410630615.000000\n"
 
-#: ../src/lxrandr.c:87
+#: ../src/lxrandr.c:88
 msgid "Laptop LCD Monitor"
 msgstr "Laptop LCD monitor"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:90
 msgid "External VGA Monitor"
 msgstr "Külső VGA monitor"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:90
 msgid "VGA Monitor"
 msgstr "VGA monitor"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:92
 msgid "External DVI Monitor"
 msgstr "Külső DVI monitor"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:92
 msgid "DVI Monitor"
 msgstr "DVI monitor"
 
-#: ../src/lxrandr.c:93
+#: ../src/lxrandr.c:94
 msgid "TV"
 msgstr "TV"
 
-#: ../src/lxrandr.c:95
+#: ../src/lxrandr.c:96
 msgid "Default Monitor"
 msgstr "Alapértelmezett monitor"
 
-#: ../src/lxrandr.c:312 ../src/lxrandr.c:1002
+#: ../src/lxrandr.c:313 ../src/lxrandr.c:999
 msgid "Auto"
 msgstr "Auto"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxrandr.c:339
+#: ../src/lxrandr.c:340
 msgid "translator-credits"
 msgstr ""
 "Dvornik László <rezuri@zoho.com>\n"
 "Szervác Attila <sas@321.hu>"
 
-#: ../src/lxrandr.c:350
+#: ../src/lxrandr.c:351
 msgid "Monitor configuration tool for LXDE"
 msgstr "Monitorbeállító segédeszköz az LXDE-hez"
 
-#: ../src/lxrandr.c:529
+#: ../src/lxrandr.c:530
 msgid "LXRandR autostart"
 msgstr "LXRandR automatikus indítása"
 
-#: ../src/lxrandr.c:530
+#: ../src/lxrandr.c:531
 msgid "Start xrandr with settings done in LXRandR"
 msgstr "Az xrandr indítása az LXRandR-ben beállítottakkal"
 
-#: ../src/lxrandr.c:580
+#: ../src/lxrandr.c:581
 msgid ""
 "Is everything OK? Confirm within 15 seconds, otherwise previous state will "
 "be restored."
@@ -78,15 +78,15 @@ msgstr ""
 "Minden rendben van? Erősítse meg 15 másodpercen belül, különben az előző "
 "állapot kerül visszaállításra."
 
-#: ../src/lxrandr.c:583
+#: ../src/lxrandr.c:584
 msgid "_OK"
 msgstr "_OK"
 
-#: ../src/lxrandr.c:584
+#: ../src/lxrandr.c:585
 msgid "_Abort"
 msgstr "_Megszakítás"
 
-#: ../src/lxrandr.c:711
+#: ../src/lxrandr.c:712
 msgid ""
 "You cannot turn off all monitors. Otherwise, you will not be able to turn "
 "them on again since this tool is not accessible without monitor."
@@ -94,125 +94,125 @@ msgstr ""
 "Nem kapcsolhat ki minden monitort. Különben nem fogja tudni visszakapcsolni "
 "azokat, mivel ez az eszköz nem érhető el monitor nélkül."
 
-#: ../src/lxrandr.c:732
+#: ../src/lxrandr.c:733
 msgid "Configuration Saved"
 msgstr "A beállítás mentve"
 
-#: ../src/lxrandr.c:748
+#: ../src/lxrandr.c:749
 msgid "Configuration file deleted"
 msgstr ""
 
-#: ../src/lxrandr.c:782
+#: ../src/lxrandr.c:783
 msgid "Unable to get monitor information!"
 msgstr "Nem lehet lekérdezni a monitor adatait!"
 
-#: ../src/lxrandr.c:789
+#: ../src/lxrandr.c:792
 msgid "Display Settings"
 msgstr "Kijelző beállításai"
 
-#: ../src/lxrandr.c:799
+#: ../src/lxrandr.c:801
 msgid "_Save"
 msgstr ""
 
-#: ../src/lxrandr.c:800
+#: ../src/lxrandr.c:802
 msgid "_Apply"
 msgstr ""
 
-#: ../src/lxrandr.c:801
+#: ../src/lxrandr.c:803
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/lxrandr.c:802
+#: ../src/lxrandr.c:804
 msgid "C_lear"
 msgstr ""
 
-#: ../src/lxrandr.c:803
+#: ../src/lxrandr.c:805
 msgid "A_bout"
 msgstr ""
 
-#: ../src/lxrandr.c:858
+#: ../src/lxrandr.c:860
 msgid "Show the same screen on both laptop LCD and external monitor"
 msgstr "Azonos képernyő megjelenítése a laptop LCD-n és a külső monitoron"
 
-#: ../src/lxrandr.c:863
+#: ../src/lxrandr.c:865
 msgid "Turn off laptop LCD and use external monitor only"
 msgstr "Laptop LCD kikapcsolása és csak a külső monitor használata"
 
-#: ../src/lxrandr.c:868
+#: ../src/lxrandr.c:870
 msgid "Turn off external monitor and use laptop LCD only"
 msgstr "Külső monitor kikapcsolása és csak a laptop LCD használata"
 
-#: ../src/lxrandr.c:873
+#: ../src/lxrandr.c:875
 msgid "Place external monitor to the right of laptop LCD"
 msgstr "Külső monitor elhelyezése a laptop LCD jobb oldalára"
 
-#: ../src/lxrandr.c:878
+#: ../src/lxrandr.c:880
 msgid "Place external monitor above of laptop LCD"
 msgstr "Külső monitor elhelyezése a laptop LCD tetejére"
 
-#: ../src/lxrandr.c:882
+#: ../src/lxrandr.c:884
 msgid "Quick Options"
 msgstr "Gyors lehetőségek"
 
-#: ../src/lxrandr.c:892
+#: ../src/lxrandr.c:894
 msgid "Advanced"
 msgstr "Haladó"
 
-#: ../src/lxrandr.c:901
+#: ../src/lxrandr.c:898
 msgid "The following monitor is detected:"
 msgid_plural "The following monitors are detected:"
 msgstr[0] "Az alábbi monitort találtam:"
 msgstr[1] "Az alábbi monitorokat találtam:"
 
-#: ../src/lxrandr.c:954
+#: ../src/lxrandr.c:951
 msgid "Turn On"
 msgstr "Bekapcsolás"
 
-#: ../src/lxrandr.c:968
+#: ../src/lxrandr.c:965
 msgid "Position:"
 msgstr "Pozíció:"
 
-#: ../src/lxrandr.c:971
+#: ../src/lxrandr.c:968
 msgid "Default"
 msgstr "Alapértelmezett"
 
-#: ../src/lxrandr.c:972
+#: ../src/lxrandr.c:969
 msgid "On right"
 msgstr "Jobbra"
 
-#: ../src/lxrandr.c:973
+#: ../src/lxrandr.c:970
 msgid "Above"
 msgstr "Fent"
 
-#: ../src/lxrandr.c:974
+#: ../src/lxrandr.c:971
 msgid "On left"
 msgstr "Balra"
 
-#: ../src/lxrandr.c:975
+#: ../src/lxrandr.c:972
 msgid "Below"
 msgstr "Lent"
 
-#: ../src/lxrandr.c:981
+#: ../src/lxrandr.c:978
 msgid "Primary"
 msgstr ""
 
-#: ../src/lxrandr.c:989
+#: ../src/lxrandr.c:986
 msgid "Resolution:"
 msgstr "Felbontás:"
 
-#: ../src/lxrandr.c:996
+#: ../src/lxrandr.c:993
 msgid "Refresh Rate:"
 msgstr "Frissítési frekvencia:"
 
-#: ../data/lxrandr.desktop.in:3
+#: ../data/lxrandr.desktop.in.h:1
 msgid "Monitor Settings"
 msgstr "Monitor beállításai"
 
-#: ../data/lxrandr.desktop.in:4
+#: ../data/lxrandr.desktop.in.h:2
 msgid "Change screen resolution and configure external monitors"
 msgstr "Képernyőfelbontás megváltoztatása és külső monitorok beállítása"
 
-#: ../data/lxrandr.desktop.in:11
+#: ../data/lxrandr.desktop.in.h:3
 msgid ""
 "screen;display;tv;extend;projector;xrandr;refresh rate;position;enable;"
 "disable;"

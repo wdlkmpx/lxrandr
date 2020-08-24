@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxrandr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 20:51+0800\n"
+"POT-Creation-Date: 2020-08-24 15:06+0800\n"
 "PO-Revision-Date: 2014-12-02 15:33+0000\n"
 "Last-Translator: Martin Bagge <brother@bsnet.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -18,40 +18,40 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1410630615.000000\n"
 
-#: ../src/lxrandr.c:87
+#: ../src/lxrandr.c:88
 msgid "Laptop LCD Monitor"
 msgstr "Bärbar med LCD-skärm"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:90
 msgid "External VGA Monitor"
 msgstr "Extern VGA-skärm"
 
-#: ../src/lxrandr.c:89
+#: ../src/lxrandr.c:90
 msgid "VGA Monitor"
 msgstr "VGA-skärm"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:92
 msgid "External DVI Monitor"
 msgstr "Extern DVI-skärm"
 
-#: ../src/lxrandr.c:91
+#: ../src/lxrandr.c:92
 msgid "DVI Monitor"
 msgstr "DVI-skärm"
 
-#: ../src/lxrandr.c:93
+#: ../src/lxrandr.c:94
 msgid "TV"
 msgstr "TV"
 
-#: ../src/lxrandr.c:95
+#: ../src/lxrandr.c:96
 msgid "Default Monitor"
 msgstr "Standardskärm"
 
-#: ../src/lxrandr.c:312 ../src/lxrandr.c:1002
+#: ../src/lxrandr.c:313 ../src/lxrandr.c:999
 msgid "Auto"
 msgstr "Automatisk"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxrandr.c:339
+#: ../src/lxrandr.c:340
 msgid "translator-credits"
 msgstr ""
 "Martin Bagge <brother@bsnet.se>\n"
@@ -59,19 +59,19 @@ msgstr ""
 "Kommentarer på översättningen lämnas till\n"
 "<tp-sv@listor.tp-sv.se>"
 
-#: ../src/lxrandr.c:350
+#: ../src/lxrandr.c:351
 msgid "Monitor configuration tool for LXDE"
 msgstr "Verktyg för skärminställningar för LXDE"
 
-#: ../src/lxrandr.c:529
+#: ../src/lxrandr.c:530
 msgid "LXRandR autostart"
 msgstr "Autostarta LXRandR"
 
-#: ../src/lxrandr.c:530
+#: ../src/lxrandr.c:531
 msgid "Start xrandr with settings done in LXRandR"
 msgstr "Starta xrandr med ändringar gjorda i LXRandR"
 
-#: ../src/lxrandr.c:580
+#: ../src/lxrandr.c:581
 msgid ""
 "Is everything OK? Confirm within 15 seconds, otherwise previous state will "
 "be restored."
@@ -79,15 +79,15 @@ msgstr ""
 "Fungerar allt som det ska? Bekräfta inom 15 sekunder annars kommer "
 "föregående inställning att återställas."
 
-#: ../src/lxrandr.c:583
+#: ../src/lxrandr.c:584
 msgid "_OK"
 msgstr "_OK"
 
-#: ../src/lxrandr.c:584
+#: ../src/lxrandr.c:585
 msgid "_Abort"
 msgstr "_Avbryt"
 
-#: ../src/lxrandr.c:711
+#: ../src/lxrandr.c:712
 msgid ""
 "You cannot turn off all monitors. Otherwise, you will not be able to turn "
 "them on again since this tool is not accessible without monitor."
@@ -95,127 +95,127 @@ msgstr ""
 "Du kan inte stänga av alla skärmar, då kan du inte sätta igång de igen "
 "eftersom du inte kan se det här verktyget."
 
-#: ../src/lxrandr.c:732
+#: ../src/lxrandr.c:733
 msgid "Configuration Saved"
 msgstr "Inställningar sparade"
 
-#: ../src/lxrandr.c:748
+#: ../src/lxrandr.c:749
 msgid "Configuration file deleted"
 msgstr ""
 
-#: ../src/lxrandr.c:782
+#: ../src/lxrandr.c:783
 msgid "Unable to get monitor information!"
 msgstr "Kan inte hämta skärminformation!"
 
-#: ../src/lxrandr.c:789
+#: ../src/lxrandr.c:792
 msgid "Display Settings"
 msgstr "Visningsinställningar"
 
-#: ../src/lxrandr.c:799
+#: ../src/lxrandr.c:801
 msgid "_Save"
 msgstr ""
 
-#: ../src/lxrandr.c:800
+#: ../src/lxrandr.c:802
 msgid "_Apply"
 msgstr ""
 
-#: ../src/lxrandr.c:801
+#: ../src/lxrandr.c:803
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/lxrandr.c:802
+#: ../src/lxrandr.c:804
 msgid "C_lear"
 msgstr ""
 
-#: ../src/lxrandr.c:803
+#: ../src/lxrandr.c:805
 msgid "A_bout"
 msgstr ""
 
-#: ../src/lxrandr.c:858
+#: ../src/lxrandr.c:860
 msgid "Show the same screen on both laptop LCD and external monitor"
 msgstr ""
 "Visa samma bild på både den bärbara datorns LCD-skärm och den externa skärmen"
 
-#: ../src/lxrandr.c:863
+#: ../src/lxrandr.c:865
 msgid "Turn off laptop LCD and use external monitor only"
 msgstr "Stäng av LCD-skärmen och använd endast en extern skärm"
 
-#: ../src/lxrandr.c:868
+#: ../src/lxrandr.c:870
 msgid "Turn off external monitor and use laptop LCD only"
 msgstr ""
 "Stäng av den externa skärmen och använd endast den bärbara datorns LCD-skärm"
 
-#: ../src/lxrandr.c:873
+#: ../src/lxrandr.c:875
 msgid "Place external monitor to the right of laptop LCD"
 msgstr "Placera extern skärm till höger om den bärbara datorns LCD-skärm"
 
-#: ../src/lxrandr.c:878
+#: ../src/lxrandr.c:880
 msgid "Place external monitor above of laptop LCD"
 msgstr "Placera extern skärm ovanför en bärbara datorns LCD-skärm"
 
-#: ../src/lxrandr.c:882
+#: ../src/lxrandr.c:884
 msgid "Quick Options"
 msgstr "Korta alternativ"
 
-#: ../src/lxrandr.c:892
+#: ../src/lxrandr.c:894
 msgid "Advanced"
 msgstr "Avancerat"
 
-#: ../src/lxrandr.c:901
+#: ../src/lxrandr.c:898
 msgid "The following monitor is detected:"
 msgid_plural "The following monitors are detected:"
 msgstr[0] "Följande skärm hittades:"
 msgstr[1] "Följande skärmar hittades:"
 
-#: ../src/lxrandr.c:954
+#: ../src/lxrandr.c:951
 msgid "Turn On"
 msgstr "Aktivera"
 
-#: ../src/lxrandr.c:968
+#: ../src/lxrandr.c:965
 msgid "Position:"
 msgstr "Position:"
 
-#: ../src/lxrandr.c:971
+#: ../src/lxrandr.c:968
 msgid "Default"
 msgstr "Standard"
 
-#: ../src/lxrandr.c:972
+#: ../src/lxrandr.c:969
 msgid "On right"
 msgstr "Till höger"
 
-#: ../src/lxrandr.c:973
+#: ../src/lxrandr.c:970
 msgid "Above"
 msgstr "Ovanför"
 
-#: ../src/lxrandr.c:974
+#: ../src/lxrandr.c:971
 msgid "On left"
 msgstr "Till vänster"
 
-#: ../src/lxrandr.c:975
+#: ../src/lxrandr.c:972
 msgid "Below"
 msgstr "Nedanför"
 
-#: ../src/lxrandr.c:981
+#: ../src/lxrandr.c:978
 msgid "Primary"
 msgstr ""
 
-#: ../src/lxrandr.c:989
+#: ../src/lxrandr.c:986
 msgid "Resolution:"
 msgstr "Upplösning:"
 
-#: ../src/lxrandr.c:996
+#: ../src/lxrandr.c:993
 msgid "Refresh Rate:"
 msgstr "Uppdateringsfrekvens:"
 
-#: ../data/lxrandr.desktop.in:3
+#: ../data/lxrandr.desktop.in.h:1
 msgid "Monitor Settings"
 msgstr "Visningsinställningar"
 
-#: ../data/lxrandr.desktop.in:4
+#: ../data/lxrandr.desktop.in.h:2
 msgid "Change screen resolution and configure external monitors"
 msgstr "Ändra skärmupplösning och gör inställningar för externa skärmar"
 
-#: ../data/lxrandr.desktop.in:11
+#: ../data/lxrandr.desktop.in.h:3
 msgid ""
 "screen;display;tv;extend;projector;xrandr;refresh rate;position;enable;"
 "disable;"
