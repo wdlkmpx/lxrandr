@@ -33,6 +33,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "gtkcompat.h"
 
 typedef enum
@@ -786,15 +787,16 @@ int main(int argc, char** argv)
     }
 
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    dlg = gtk_dialog_new_with_buttons( _("Display Settings"),
-                                       GTK_WINDOW(window),
-                                       GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-                                       NULL );
-    g_signal_connect( dlg, "response", G_CALLBACK(on_response), NULL );
-    gtk_container_set_border_width( GTK_CONTAINER(dlg), 8 );
 
+    dlg = gtk_dialog_new ();
+    gtk_window_set_title (GTK_WINDOW (dlg), _("Display Settings"));
+    gtk_window_set_transient_for (GTK_WINDOW (dlg), GTK_WINDOW (window));
+    gtk_window_set_modal (GTK_WINDOW (dlg), TRUE);
     /* Set icon name for main (dlg) window so it displays in the panel. */
-    gtk_window_set_icon_name(GTK_WINDOW(dlg), "video-display");
+    gtk_window_set_icon_name (GTK_WINDOW (dlg), "video-display");
+
+    g_signal_connect( dlg, "response", G_CALLBACK(on_response), NULL );
+    gtk_container_set_border_width (GTK_CONTAINER (dlg), 3);
 
     GtkWidget* button_save   = gtk_dialog_add_button(GTK_DIALOG(dlg), _("_Save"),   GTK_RESPONSE_ACCEPT);
     GtkWidget* button_apply  = gtk_dialog_add_button(GTK_DIALOG(dlg), _("_Apply"),  GTK_RESPONSE_OK);
