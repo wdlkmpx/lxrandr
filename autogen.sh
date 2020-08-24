@@ -1,33 +1,36 @@
-#! /bin/sh
-AC_VERSION=
+#!/bin/sh
+# Run this to generate all the initial makefiles, etc.
 
-AUTOMAKE=${AUTOMAKE:-automake}
-AM_INSTALLED_VERSION=$($AUTOMAKE --version | sed -e '2,$ d' -e 's/.* \([0-9]*\.[0-9]*\).*/\1/')
+test -z "$AUTOMAKE"   && AUTOMAKE=automake
+test -z "$ACLOCAL"    && ACLOCAL=aclocal
+test -z "$AUTOCONF"   && AUTOCONF=autoconf
+test -z "$AUTOHEADER" && AUTOHEADER=autoheader
 
-# FIXME: we need a better way for version check later.
-case "$AM_INSTALLED_VERSION" in
-    1.1[1-9])
-	;;
-    *)
-	echo
-	echo "You must have automake >= 1.11 installed."
-	echo "Install the appropriate package for your distribution,"
-	echo "or get the source tarball at http://ftp.gnu.org/gnu/automake/"
-	exit 1
-	;;
-esac
+#set -x
 
+#Get all required m4 macros required for configure
+#libtoolize --copy --force || exit 1
+#$ACLOCAL -I m4 || exit 1
+$ACLOCAL || exit 1
 
-if [ "x${ACLOCAL_DIR}" != "x" ]; then
-    ACLOCAL_ARG=-I ${ACLOCAL_DIR}
+#Generate config.h.in
+$AUTOHEADER --force || exit 1
+
+#Generate Makefile.in's
+touch config.rpath
+$AUTOMAKE --add-missing --copy --force || exit 1
+
+if grep "IT_PROG_INTLTOOL" configure.ac >/dev/null ; then
+	intltoolize -c --automake --force || exit 1
+	# po/Makefile.in.in has these lines:
+	#    mostlyclean:
+	#       rm -f *.pox $(GETTEXT_PACKAGE).pot *.old.po cat-id-tbl.tmp
+	# prevent $(GETTEXT_PACKAGE).pot from being deleted by `make clean`
+	sed 's/pox \$(GETTEXT_PACKAGE).pot/pox/' po/Makefile.in.in > po/Makefile.in.inx
+	mv -f po/Makefile.in.inx po/Makefile.in.in
 fi
 
-set -x
-
-${ACLOCAL:-aclocal$AM_VERSION} ${ACLOCAL_ARG}
-${AUTOHEADER:-autoheader$AC_VERSION} --force
-AUTOMAKE=$AUTOMAKE intltoolize -c --automake --force
-$AUTOMAKE --add-missing --copy --include-deps
-${AUTOCONF:-autoconf$AC_VERSION}
+#generate configure
+$AUTOCONF --force || exit 1
 
 rm -rf autom4te.cache
