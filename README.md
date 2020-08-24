@@ -2,16 +2,22 @@ LXRANDR(w)
 =======
 Monitor configuration tool
 
-## Compile:
+## Requirements:
+- GTK2 >= 2.14
+- GTK3 >= 3.0
+
+## Compile (git):
 - ./autogen.sh
 - ./configure --prefix=/usr
-- make
-- make install
+- make && make install
 
-## Notes for compilation: 
-- requires intltool and gtk2/gtk3 to compile.
-- use `./configure --prefix=/usr --enable-gtk3` to build the gtk3 ui..
-- no need to run `./autogen.sh` if `configure` is already generated (release tarball)
+## Compile (release tarball)
+- ./configure --prefix=/usr
+- make && make install
+
+## Notes
+- GTK3: `./configure --prefix=/usr --enable-gtk3`
+- see also `./configure --help`
 
 ## PO/: Update lxrandr.po / *.po / LINGUAS
 - cd po
