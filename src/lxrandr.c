@@ -894,7 +894,7 @@ int main(int argc, char** argv)
     gtk_notebook_append_page( GTK_NOTEBOOK(notebook), vbox, gtk_label_new(_("Advanced")) );
 
     label = gtk_label_new("");
-    gtk_widget_set_halign (label, GTK_ALIGN_START);
+    gtkcompat_widget_set_halign_left (label);
     gtk_label_set_markup( GTK_LABEL(label), ngettext( "The following monitor is detected:",
                                     "The following monitors are detected:",
                                     g_slist_length(monitors) ) );

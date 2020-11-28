@@ -6,8 +6,7 @@ lxrandr_CFLAGS = \
 
 bin_PROGRAMS = lxrandr
 
-lxrandr_SOURCES = \
-	lxrandr.c gtkcompat.c gtkcompat.h
+lxrandr_SOURCES = lxrandr.c
 
 lxrandr_LDADD = @GTK_LIBS@ $(INTLLIBS)
 
