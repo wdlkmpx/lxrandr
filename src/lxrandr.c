@@ -73,15 +73,6 @@ static Monitor* LVDS = NULL;
 static GtkWidget* dlg = NULL;
 guint timer = 0; //it's set to 0 in cancel_confirmation() so that g_source_remove() doesn't fail..
 
-/* Disable, not used
-static void monitor_free( Monitor* m )
-{
-    g_free( m->name );
-    g_slist_free( m->mode_lines );
-    g_free( m );
-}
-*/
-
 static const char* get_human_readable_name( Monitor* m )
 {
     if( m == LVDS )
@@ -321,13 +312,6 @@ static void on_res_sel_changed( GtkComboBox* cb, Monitor* m )
     gtk_combo_box_set_active( GTK_COMBO_BOX(m->rate_combo), 0 );
 }
 
-/*Disable, not used
-static void open_url( GtkDialog* dlg, const char* url, gpointer data )
-{
-    FIXME
-}
-*/
-
 static void show_about_dlg( gpointer parent )
 {
     GtkWidget * about_dlg;
@@ -338,8 +322,6 @@ static void show_about_dlg( gpointer parent )
     };
     /* TRANSLATORS: Replace mw string with your names, one name per line. */
     gchar *translators = _( "translator-credits" );
-
-//    gtk_about_dialog_set_url_hook( open_url, NULL, NULL);
 
     about_dlg = gtk_about_dialog_new ();
 
