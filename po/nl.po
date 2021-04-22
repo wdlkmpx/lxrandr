@@ -1,6 +1,6 @@
 # Dutch translation of the lxrandr package.
 # Copyright (C) the author of the lxrandr package.
-# This file is distributed under the same license as the 
+# This file is distributed under the same license as the
 # lxrandr package.
 # Pjotr, 2011.
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: lxrandr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-24 15:06+0800\n"
-"PO-Revision-Date: 2018-05-25 11:06+0000\n"
-"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
+"PO-Revision-Date: 2021-04-22 18:28+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
-"Language: templates\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.7\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-POOTLE-MTIME: 1410630615.000000\n"
 
 #: ../src/lxrandr.c:88
@@ -56,31 +56,32 @@ msgstr "Automatisch"
 msgid "translator-credits"
 msgstr ""
 "Sander De Voogdt\n"
-"Pjotr (pjotrvertaalt@gmail.com)"
+"Pjotr (pjotrvertaalt@gmail.com)\n"
+"Heimen Stoffels (vistausss@fastmail.com)"
 
 #: ../src/lxrandr.c:351
 msgid "Monitor configuration tool for LXDE"
-msgstr "Instelgereedschap voor beeldscherm, voor LXDE"
+msgstr "Beeldscherm-instelgereedschap voor LXDE"
 
 #: ../src/lxrandr.c:530
 msgid "LXRandR autostart"
-msgstr "Automatische start van LXRandR"
+msgstr "LXRandR automatisch opstarten"
 
 #: ../src/lxrandr.c:531
 msgid "Start xrandr with settings done in LXRandR"
-msgstr "Start xrandr met instellingen vervaardigd in LXRandR"
+msgstr "xrandr starten met instellingen vervaardigd in LXRandR"
 
 #: ../src/lxrandr.c:581
 msgid ""
 "Is everything OK? Confirm within 15 seconds, otherwise previous state will "
 "be restored."
 msgstr ""
-"Is alles in orde? Bevestig dit binnen 15 seconden, want anders zal de vorige "
-"staat worden hersteld."
+"Ziet alles er goed uit? Bevestig dit binnen 15 seconden, anders wordt de "
+"vorige staat hersteld."
 
 #: ../src/lxrandr.c:584
 msgid "_OK"
-msgstr "_OK"
+msgstr "_Oké"
 
 #: ../src/lxrandr.c:585
 msgid "_Abort"
@@ -91,21 +92,21 @@ msgid ""
 "You cannot turn off all monitors. Otherwise, you will not be able to turn "
 "them on again since this tool is not accessible without monitor."
 msgstr ""
-"U kunt niet alle beeldschermen uitschakelen. Anders zoudt u hen niet meer "
-"aan kunnen zetten, aangezien dit hulpmiddel alleen te bedienen is met een "
+"U kunt niet alle beeldschermen uitschakelen, anders zou u ze niet meer aan "
+"kunnen zetten, aangezien dit hulpmiddel alleen te bedienen is met een "
 "beeldscherm."
 
 #: ../src/lxrandr.c:733
 msgid "Configuration Saved"
-msgstr "Instellingen opgeslagen"
+msgstr "De instellingen zijn opgeslagen"
 
 #: ../src/lxrandr.c:749
 msgid "Configuration file deleted"
-msgstr ""
+msgstr "Het instellingenbestand is verwijderd"
 
 #: ../src/lxrandr.c:783
 msgid "Unable to get monitor information!"
-msgstr "Kan beeldscherminformatie niet verkrijgen!"
+msgstr "Er kan geen beeldscherminformatie worden opgehaald!"
 
 #: ../src/lxrandr.c:792
 msgid "Display Settings"
@@ -113,27 +114,27 @@ msgstr "Scherminstellingen"
 
 #: ../src/lxrandr.c:801
 msgid "_Save"
-msgstr ""
+msgstr "Op_slaan"
 
 #: ../src/lxrandr.c:802
 msgid "_Apply"
-msgstr ""
+msgstr "Toep_assen"
 
 #: ../src/lxrandr.c:803
 msgid "_Cancel"
-msgstr ""
+msgstr "_Annuleren"
 
 #: ../src/lxrandr.c:804
 msgid "C_lear"
-msgstr ""
+msgstr "W_issen"
 
 #: ../src/lxrandr.c:805
 msgid "A_bout"
-msgstr ""
+msgstr "O_ver"
 
 #: ../src/lxrandr.c:860
 msgid "Show the same screen on both laptop LCD and external monitor"
-msgstr "Toon hetzelfde beeld op het laptopscherm en het externe beeldscherm"
+msgstr "Hetzelfde beeld tonen op het laptopscherm en externe beeldscherm"
 
 #: ../src/lxrandr.c:865
 msgid "Turn off laptop LCD and use external monitor only"
@@ -145,11 +146,11 @@ msgstr "Extern beeldscherm uitschakelen en alleen laptopscherm gebruiken"
 
 #: ../src/lxrandr.c:875
 msgid "Place external monitor to the right of laptop LCD"
-msgstr "Plaats extern beeldscherm rechts van LCD-scherm van laptop"
+msgstr "Extern beeldscherm rechts van laptopscherm plaatsen"
 
 #: ../src/lxrandr.c:880
 msgid "Place external monitor above of laptop LCD"
-msgstr "Plaats extern beeldscherm boven LCD-scherm van laptop"
+msgstr "Extern beeldscherm boven laptopscherm plaatsen"
 
 #: ../src/lxrandr.c:884
 msgid "Quick Options"
@@ -162,8 +163,8 @@ msgstr "Geavanceerd"
 #: ../src/lxrandr.c:898
 msgid "The following monitor is detected:"
 msgid_plural "The following monitors are detected:"
-msgstr[0] "Het volgende beeldscherm is gevonden:"
-msgstr[1] "De volgende beeldschermen zijn gevonden:"
+msgstr[0] "Het volgende beeldscherm is aangetroffen:"
+msgstr[1] "De volgende beeldschermen zijn aangetroffen:"
 
 #: ../src/lxrandr.c:951
 msgid "Turn On"
@@ -195,7 +196,7 @@ msgstr "Onder"
 
 #: ../src/lxrandr.c:978
 msgid "Primary"
-msgstr ""
+msgstr "Primair"
 
 #: ../src/lxrandr.c:986
 msgid "Resolution:"
@@ -203,7 +204,7 @@ msgstr "Resolutie:"
 
 #: ../src/lxrandr.c:993
 msgid "Refresh Rate:"
-msgstr "Verversingsfrequentie:"
+msgstr "Ververssnelheid:"
 
 #: ../data/lxrandr.desktop.in.h:1
 msgid "Monitor Settings"
@@ -211,7 +212,7 @@ msgstr "Beeldscherminstellingen"
 
 #: ../data/lxrandr.desktop.in.h:2
 msgid "Change screen resolution and configure external monitors"
-msgstr "Schermresolutie veranderen en externe beeldschermen instellen"
+msgstr "Pas de schermresolutie aan en stel externe beeldschermen in"
 
 #: ../data/lxrandr.desktop.in.h:3
 msgid ""
