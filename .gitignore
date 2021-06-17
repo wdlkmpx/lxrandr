@@ -15,7 +15,6 @@ Makefile.in
 *.a
 m4/
 missing
-po/Makefile.in.in
 config.guess
 config.h
 config.h.in*
@@ -35,7 +34,6 @@ intltool-merge.in
 intltool-update.in
 src/xml-purge
 src/lxrandr
-data/lxrandr.desktop
 debian/files
 debian/lxrandr.debhelper.log
 debian/lxrandr.substvars

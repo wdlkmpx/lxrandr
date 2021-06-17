@@ -1,22 +1,17 @@
 dnl Process this file with autoconf to produce a configure script.
 
 AC_INIT([lxrandr],[0.3.5w])
+AC_CONFIG_AUX_DIR([autoconf])
+AC_CONFIG_MACRO_DIR([autoconf-m4])
 AM_INIT_AUTOMAKE([-Wall foreign])
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_MACRO_DIR([.])
 AM_GNU_GETTEXT([external])
 
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 m4_ifdef([AM_MAINTAINER_MODE], [AM_MAINTAINER_MODE])
 
-# Init intltool
-IT_PROG_INTLTOOL
-
 AC_SEARCH_LIBS([strerror],[cposix])
 AC_PROG_CC
-AM_PROG_CC_STDC
-AC_HEADER_STDC
-AM_PROG_CC_C_O
 
 AC_ARG_ENABLE(more_warnings,
        [AS_HELP_STRING([--enable-more-warnings],[Add more warnings @<:@default=no@:>@])],
@@ -50,8 +45,6 @@ AC_SUBST(ADDITIONAL_FLAGS)
 GETTEXT_PACKAGE=lxrandr
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package.])
-
-AM_GLIB_GNU_GETTEXT
 
 AC_ARG_ENABLE(debug,
     [AC_HELP_STRING([--enable-debug],

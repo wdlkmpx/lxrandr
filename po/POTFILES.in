@@ -1,4 +1,2 @@
-# List of source files containing translatable strings.
-
 src/lxrandr.c
-data/lxrandr.desktop.in
+

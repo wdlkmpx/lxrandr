@@ -1,4 +1,4 @@
-ACLOCAL_AMFLAGS = -I .
+ACLOCAL_AMFLAGS = -I autoconf-m4
 
 SUBDIRS = src po data
 
