@@ -1,0 +1,201 @@
+
+GETTEXT_PACKAGE = @GETTEXT_PACKAGE@
+PACKAGE = @PACKAGE@
+VERSION = @VERSION@
+@SET_MAKE@
+
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+datarootdir = @datarootdir@
+datadir = @datadir@
+localedir = @localedir@
+
+INSTALL = @INSTALL@
+INSTALL_DATA = @INSTALL_DATA@
+
+GMSGFMT = @GMSGFMT@
+MSGFMT = @MSGFMT@
+#MSGFMT_OPTS = -c
+XGETTEXT = @XGETTEXT@
+MSGMERGE = msgmerge
+
+POFILES = af.po ar.po ast.po be.po bg.po bn_IN.po bn.po ca.po cs.po da.po de.po el.po en_GB.po es.po et.po eu.po fa.po fi.po fo.po fr.po frp.po gl.po he.po hr.po hu.po id.po is.po it.po ja.po kk.po ko.po lg.po lt.po ml.po ms.po nb.po nl.po nn.po pa.po pl.po ps.po pt_BR.po pt.po ro.po ru.po sk.po sl.po sr@latin.po sr.po sv.po te.po th.po tr.po tt_RU.po ug.po uk.po ur_PK.po ur.po vi.po zh_CN.po zh_TW.po
+MOFILES = af.mo ar.mo ast.mo be.mo bg.mo bn_IN.mo bn.mo ca.mo cs.mo da.mo de.mo el.mo en_GB.mo es.mo et.mo eu.mo fa.mo fi.mo fo.mo fr.mo frp.mo gl.mo he.mo hr.mo hu.mo id.mo is.mo it.mo ja.mo kk.mo ko.mo lg.mo lt.mo ml.mo ms.mo nb.mo nl.mo nn.mo pa.mo pl.mo ps.mo pt_BR.mo pt.mo ro.mo ru.mo sk.mo sl.mo sr@latin.mo sr.mo sv.mo te.mo th.mo tr.mo tt_RU.mo ug.mo uk.mo ur_PK.mo ur.mo vi.mo zh_CN.mo zh_TW.mo
+LINGUAS = af ar ast be bg bn_IN bn ca cs da de el en_GB es et eu fa fi fo fr frp gl he hr hu id is it ja kk ko lg lt ml ms nb nl nn pa pl ps pt_BR pt ro ru sk sl sr@latin sr sv te th tr tt_RU ug uk ur_PK ur vi zh_CN zh_TW
+POTFILES = ../src/lxrandr.c
+
+#.SUFFIXES: .po .gmo .mo
+#.po.mo:
+#	$(GMSGFMT) $(MSGFMT_OPTS) -o `echo $* | sed "s,.*/,,"`.mo $<
+
+all: all-@USE_NLS@
+all-yes: $(MOFILES)
+all-no:
+
+$(GETTEXT_PACKAGE).pot: $(POTFILES)
+	$(XGETTEXT) --default-domain=$(GETTEXT_PACKAGE) \
+	--add-comments --keyword=_ --keyword=N_ --from-code=UTF-8 \
+	-o $(GETTEXT_PACKAGE).pot $(POTFILES)
+
+install: install-data-@USE_NLS@
+install-data-no: all
+install-data-yes: all
+	catalogs="$(LINGUAS)"; \
+	for cat in $$catalogs; do \
+	  dir=$(DESTDIR)$(localedir)/$$cat/LC_MESSAGES; \
+	  mkdir -p $$dir; \
+	  $(INSTALL_DATA) $$cat.mo $$dir/$(GETTEXT_PACKAGE).mo; \
+	  echo "installing $$cat.mo as $$dir/$(GETTEXT_PACKAGE).mo"; \
+	done
+
+uninstall:
+	catalogs="$(LINGUAS)"; \
+	for cat in $$catalogs; do \
+	  echo "rm -f $(DESTDIR)$(localedir)/$$cat/LC_MESSAGES/$(GETTEXT_PACKAGE).mo"; \
+	  rm -f $(DESTDIR)$(localedir)/$$cat/LC_MESSAGES/$(GETTEXT_PACKAGE).mo; \
+	done
+
+mostlyclean:
+	rm -f *.pox *.old.po *.new.po *.mo *.gmo *.msg *.cat *.cat.m
+
+clean: mostlyclean
+
+distclean: clean
+	rm -f Makefile POTFILES
+
+update-po: Makefile
+	rm -f $(GETTEXT_PACKAGE).pot
+	$(MAKE) $(GETTEXT_PACKAGE).pot
+	catalogs="$(LINGUAS)"; \
+	for lang in $$catalogs; do \
+	  printf " %s " "$$lang"; \
+	  if $(MSGMERGE) $$lang.po $(GETTEXT_PACKAGE).pot -o $$lang.new.po; then \
+	    mv -f $$lang.new.po $$lang.po || exit 1; \
+	  else \
+	    echo "msgmerge for $$lang failed!"; \
+	    rm -f $$lang.new.po; \
+	  fi; \
+	done
+
+af.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o af.mo af.po
+ar.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ar.mo ar.po
+ast.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ast.mo ast.po
+be.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o be.mo be.po
+bg.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o bg.mo bg.po
+bn_IN.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o bn_IN.mo bn_IN.po
+bn.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o bn.mo bn.po
+ca.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ca.mo ca.po
+cs.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o cs.mo cs.po
+da.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o da.mo da.po
+de.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o de.mo de.po
+el.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o el.mo el.po
+en_GB.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o en_GB.mo en_GB.po
+es.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o es.mo es.po
+et.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o et.mo et.po
+eu.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o eu.mo eu.po
+fa.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o fa.mo fa.po
+fi.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o fi.mo fi.po
+fo.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o fo.mo fo.po
+fr.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o fr.mo fr.po
+frp.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o frp.mo frp.po
+gl.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o gl.mo gl.po
+he.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o he.mo he.po
+hr.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o hr.mo hr.po
+hu.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o hu.mo hu.po
+id.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o id.mo id.po
+is.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o is.mo is.po
+it.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o it.mo it.po
+ja.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ja.mo ja.po
+kk.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o kk.mo kk.po
+ko.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ko.mo ko.po
+lg.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o lg.mo lg.po
+lt.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o lt.mo lt.po
+ml.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ml.mo ml.po
+ms.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ms.mo ms.po
+nb.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o nb.mo nb.po
+nl.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o nl.mo nl.po
+nn.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o nn.mo nn.po
+pa.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o pa.mo pa.po
+pl.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o pl.mo pl.po
+ps.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ps.mo ps.po
+pt_BR.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o pt_BR.mo pt_BR.po
+pt.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o pt.mo pt.po
+ro.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ro.mo ro.po
+ru.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ru.mo ru.po
+sk.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o sk.mo sk.po
+sl.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o sl.mo sl.po
+sr@latin.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o sr@latin.mo sr@latin.po
+sr.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o sr.mo sr.po
+sv.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o sv.mo sv.po
+te.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o te.mo te.po
+th.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o th.mo th.po
+tr.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o tr.mo tr.po
+tt_RU.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o tt_RU.mo tt_RU.po
+ug.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ug.mo ug.po
+uk.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o uk.mo uk.po
+ur_PK.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ur_PK.mo ur_PK.po
+ur.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o ur.mo ur.po
+vi.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o vi.mo vi.po
+zh_CN.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o zh_CN.mo zh_CN.po
+zh_TW.mo:
+	$(GMSGFMT) $(MSGFMT_OPTS) -o zh_TW.mo zh_TW.po

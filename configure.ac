@@ -6,11 +6,11 @@ AC_CONFIG_MACRO_DIR([autoconf-m4])
 AM_INIT_AUTOMAKE([-Wall foreign])
 AC_CONFIG_HEADERS([config.h])
 AM_GNU_GETTEXT([external])
+#L#T_INIT
 
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 m4_ifdef([AM_MAINTAINER_MODE], [AM_MAINTAINER_MODE])
 
-AC_SEARCH_LIBS([strerror],[cposix])
 AC_PROG_CC
 
 AC_ARG_ENABLE(more_warnings,
@@ -67,7 +67,7 @@ fi
 AC_CONFIG_FILES([
 Makefile
 src/Makefile
-po/Makefile.in
+po/Makefile
 data/Makefile
 ])
 AC_OUTPUT
