@@ -24,12 +24,8 @@ if test "$1" =  "po" ; then
 fi
 
 if test "$1" =  "linguas" ; then
-	test -d "po/" || exit
-	pot_in=$(grep '_(' $(find . -type f -name '*.h' -or -name '*.c') | sed -e 's%^\./%%' -e 's%:.*%%' | sort -u)
-	echo "${pot_in}" > po/POTFILES.in
-	linguas=$(find po -name '*.po' | sed -e 's%.*/%%' -e 's%\.po%%' | sort)
-	echo ${linguas} > po/LINGUAS
-	exit
+	./po/Makefile.in.gen
+	exit $?
 fi
 
 #===========================================================================
@@ -61,8 +57,8 @@ test -z "$AUTOMAKE"   && AUTOMAKE=automake
 test -z "$ACLOCAL"    && ACLOCAL=aclocal
 test -z "$AUTOCONF"   && AUTOCONF=autoconf
 test -z "$AUTOHEADER" && AUTOHEADER=autoheader
-#test -z "$LIBTOOLIZE" && LIBTOOLIZE=$(which libtoolize glibtoolize 2>/dev/null | head -1)
-#test -z "$LIBTOOLIZE" && LIBTOOLIZE=libtoolize #paranoid precaution
+test -z "$LIBTOOLIZE" && LIBTOOLIZE=$(which libtoolize glibtoolize 2>/dev/null | head -1)
+test -z "$LIBTOOLIZE" && LIBTOOLIZE=libtoolize #paranoid precaution
 
 if test "$1" == "verbose" || test "$1" == "--verbose" ; then
 	set -x
@@ -83,7 +79,9 @@ if test -n "$m4dir" ; then
 fi
 
 # Get all required m4 macros required for configure
-#$LIBTOOLIZE ${verbose} --copy --force || exit 1
+if grep -q LT_INIT configure.ac ; then
+	$LIBTOOLIZE ${verbose} --copy --force || exit 1
+fi
 $ACLOCAL ${verbose} || exit 1
 
 # Generate config.h.in
