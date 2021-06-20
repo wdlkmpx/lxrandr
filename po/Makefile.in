@@ -19,9 +19,9 @@ MSGFMT = @MSGFMT@
 XGETTEXT = @XGETTEXT@
 MSGMERGE = msgmerge
 
-POFILES = af.po ar.po ast.po be.po bg.po bn_IN.po bn.po ca.po cs.po da.po de.po el.po en_GB.po es.po et.po eu.po fa.po fi.po fo.po fr.po frp.po gl.po he.po hr.po hu.po id.po is.po it.po ja.po kk.po ko.po lg.po lt.po ml.po ms.po nb.po nl.po nn.po pa.po pl.po ps.po pt_BR.po pt.po ro.po ru.po sk.po sl.po sr@latin.po sr.po sv.po te.po th.po tr.po tt_RU.po ug.po uk.po ur_PK.po ur.po vi.po zh_CN.po zh_TW.po
-MOFILES = af.mo ar.mo ast.mo be.mo bg.mo bn_IN.mo bn.mo ca.mo cs.mo da.mo de.mo el.mo en_GB.mo es.mo et.mo eu.mo fa.mo fi.mo fo.mo fr.mo frp.mo gl.mo he.mo hr.mo hu.mo id.mo is.mo it.mo ja.mo kk.mo ko.mo lg.mo lt.mo ml.mo ms.mo nb.mo nl.mo nn.mo pa.mo pl.mo ps.mo pt_BR.mo pt.mo ro.mo ru.mo sk.mo sl.mo sr@latin.mo sr.mo sv.mo te.mo th.mo tr.mo tt_RU.mo ug.mo uk.mo ur_PK.mo ur.mo vi.mo zh_CN.mo zh_TW.mo
-LINGUAS = af ar ast be bg bn_IN bn ca cs da de el en_GB es et eu fa fi fo fr frp gl he hr hu id is it ja kk ko lg lt ml ms nb nl nn pa pl ps pt_BR pt ro ru sk sl sr@latin sr sv te th tr tt_RU ug uk ur_PK ur vi zh_CN zh_TW
+POFILES = af.po ar.po ast.po be.po bg.po bn_IN.po bn.po ca.po cs.po da.po de.po el.po es.po et.po eu.po fa.po fi.po fo.po fr.po frp.po gl.po he.po hr.po hu.po id.po is.po it.po ja.po kk.po ko.po lg.po lt.po ml.po ms.po nb.po nl.po nn.po pa.po pl.po ps.po pt_BR.po pt.po ro.po ru.po sk.po sl.po sr@latin.po sr.po sv.po te.po th.po tr.po tt_RU.po ug.po uk.po ur_PK.po ur.po vi.po zh_CN.po zh_TW.po
+MOFILES = af.mo ar.mo ast.mo be.mo bg.mo bn_IN.mo bn.mo ca.mo cs.mo da.mo de.mo el.mo es.mo et.mo eu.mo fa.mo fi.mo fo.mo fr.mo frp.mo gl.mo he.mo hr.mo hu.mo id.mo is.mo it.mo ja.mo kk.mo ko.mo lg.mo lt.mo ml.mo ms.mo nb.mo nl.mo nn.mo pa.mo pl.mo ps.mo pt_BR.mo pt.mo ro.mo ru.mo sk.mo sl.mo sr@latin.mo sr.mo sv.mo te.mo th.mo tr.mo tt_RU.mo ug.mo uk.mo ur_PK.mo ur.mo vi.mo zh_CN.mo zh_TW.mo
+LINGUAS = af ar ast be bg bn_IN bn ca cs da de el es et eu fa fi fo fr frp gl he hr hu id is it ja kk ko lg lt ml ms nb nl nn pa pl ps pt_BR pt ro ru sk sl sr@latin sr sv te th tr tt_RU ug uk ur_PK ur vi zh_CN zh_TW
 POTFILES = ../src/lxrandr.c
 
 #.SUFFIXES: .po .gmo .mo
@@ -101,8 +101,6 @@ de.mo:
 	$(GMSGFMT) $(MSGFMT_OPTS) -o de.mo de.po
 el.mo:
 	$(GMSGFMT) $(MSGFMT_OPTS) -o el.mo el.po
-en_GB.mo:
-	$(GMSGFMT) $(MSGFMT_OPTS) -o en_GB.mo en_GB.po
 es.mo:
 	$(GMSGFMT) $(MSGFMT_OPTS) -o es.mo es.po
 et.mo:
